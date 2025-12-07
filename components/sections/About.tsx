@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+// import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 import {
   ArrowRight,
   Download,
@@ -12,7 +12,6 @@ import {
   Sparkles,
   Quote,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import {
   personalInfo,
   expertise,
@@ -49,15 +48,16 @@ const ProfileImage = () => {
       {/* Image container */}
       <div className="relative aspect-[4/5] w-full max-w-md rounded-3xl overflow-hidden bg-card">
         {!hasError ? (
-          <Image
-            src="/james-gabbitus.jpg"
-            alt="James Gabbitus"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 400px"
-            onError={() => setHasError(true)}
-            priority
-          />
+          // <Image
+          //   src="/james-gabbitus.jpg"
+          //   alt="James Gabbitus"
+          //   fill
+          //   className="object-cover"
+          //   sizes="(max-width: 768px) 100vw, 400px"
+          //   onError={() => setHasError(true)}
+          //   priority
+          // />
+          <></>
         ) : (
           <ProfileImagePlaceholder />
         )}

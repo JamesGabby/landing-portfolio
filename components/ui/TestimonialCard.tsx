@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
 import { Quote, Star, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -69,13 +69,13 @@ const Avatar = ({
 
   return (
     <div className={cn("relative rounded-full overflow-hidden", sizeClasses[size])}>
-      <Image
+      {/* <Image
         src={src}
         alt={name}
         fill
         className="object-cover"
         onError={() => setHasError(true)}
-      />
+      /> */}
     </div>
   );
 };
