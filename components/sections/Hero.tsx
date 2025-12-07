@@ -1,18 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import {
   ArrowRight,
   Play,
   Sparkles,
-  MousePointer2,
-  Star,
   Zap,
-  Code2,
   Cpu,
 } from "lucide-react";
-import { SITE_CONFIG } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 
@@ -48,15 +44,6 @@ const FloatingOrb = ({
 
 // Animated code block for visual interest
 const CodeBlock = () => {
-  const codeLines = [
-    { text: "const", color: "text-purple-400" },
-    { text: " landing", color: "text-blue-400" },
-    { text: " = ", color: "text-foreground" },
-    { text: "await", color: "text-purple-400" },
-    { text: " createAI", color: "text-cyan-400" },
-    { text: "({", color: "text-foreground" },
-  ];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -91,7 +78,7 @@ const CodeBlock = () => {
               <span className="text-foreground">{"  "}</span>
               <span className="text-blue-400">startup</span>
               <span className="text-foreground">: </span>
-              <span className="text-green-400">"your-vision"</span>
+              <span className="text-green-400">&quot;your-vision&quot;</span>
               <span className="text-foreground">,</span>
               {"\n"}
               <span className="text-foreground">{"  "}</span>
@@ -103,7 +90,7 @@ const CodeBlock = () => {
               <span className="text-foreground">{"  "}</span>
               <span className="text-blue-400">design</span>
               <span className="text-foreground">: </span>
-              <span className="text-green-400">"premium"</span>
+              <span className="text-green-400">&quot;premium&quot;</span>
               {"\n"}
               <span className="text-foreground">{"});"}</span>
             </code>
@@ -165,7 +152,7 @@ const MetricCard = ({
   </motion.div>
 );
 
-// Client logos (placeholder - you'll replace with actual logos)
+// Client logos
 const ClientLogos = () => {
   const clients = [
     "TechFlow AI",
@@ -194,7 +181,6 @@ const ClientLogos = () => {
             transition={{ duration: 0.3, delay: 1.2 + index * 0.1 }}
             className="text-muted hover:text-muted-foreground transition-colors duration-300"
           >
-            {/* Replace with actual logo images */}
             <div className="flex items-center gap-2 text-lg font-semibold opacity-50 hover:opacity-80 transition-opacity">
               <Sparkles className="w-5 h-5" />
               {client}
@@ -204,6 +190,27 @@ const ClientLogos = () => {
       </div>
     </motion.div>
   );
+};
+
+// ✅ FIX: Define variants with proper typing
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 // Main Hero Component
@@ -229,28 +236,8 @@ export default function Hero() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-28">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Grid pattern */}
@@ -309,7 +296,7 @@ export default function Hero() {
               {/* Main Headline */}
               <motion.h1
                 variants={itemVariants}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-display-lg font-heading font-bold tracking-tight mb-6"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight mb-6"
               >
                 I build{" "}
                 <span className="relative">
