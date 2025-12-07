@@ -1,83 +1,98 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
-import { SITE_CONFIG } from "@/lib/constants";
+import { generateMetadata } from "@/lib/metadata";
+import { seoConfig } from "@/lib/seo.config";
+import { viewport as viewportConfig } from "./viewport";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FloatingContactButton from "@/components/ui/FloatingContactButton";
 
+// Font optimization with display swap for better CLS
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
   display: "swap",
+  preload: true,
+  fallback: ["monospace"],
 });
 
-// If you want a premium heading font, download Cabinet Grotesk
-// For now, we'll use Inter for headings too
-const cabinet = Inter({
-  subsets: ["latin"],
-  variable: "--font-cabinet",
-  weight: ["700", "800", "900"],
-  display: "swap",
-});
+// Export viewport separately
+export const viewport = viewportConfig;
 
+// Global metadata
 export const metadata: Metadata = {
-  title: {
-    default: SITE_CONFIG.title,
-    template: `%s | ${SITE_CONFIG.name}`,
-  },
-  description: SITE_CONFIG.description,
-  keywords: [
-    "AI landing page developer",
-    "Next.js developer",
-    "startup landing pages",
-    "AI startup website",
-    "freelance web developer",
-    "Tailwind CSS",
-    "Supabase developer",
-    "conversion-focused design",
-  ],
-  authors: [{ name: SITE_CONFIG.name }],
-  creator: SITE_CONFIG.name,
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: SITE_CONFIG.url,
-    title: SITE_CONFIG.title,
-    description: SITE_CONFIG.description,
-    siteName: SITE_CONFIG.name,
-    images: [
+  ...generateMetadata(),
+  
+  // Manifest for PWA
+  manifest: "/manifest.webmanifest",
+  
+  // Comprehensive icon configuration
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
       {
-        url: `${SITE_CONFIG.url}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: SITE_CONFIG.title,
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: seoConfig.themeColor,
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: SITE_CONFIG.title,
-    description: SITE_CONFIG.description,
-    images: [`${SITE_CONFIG.url}/og-image.png`],
-    creator: "@jamesgabbitus",
+  
+  // Apple Web App configuration
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: seoConfig.siteName,
+    startupImage: [
+      {
+        url: "/splash-1170x2532.png",
+        media: "(device-width: 390px) and (device-height: 844px)",
+      },
+    ],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+  
+  // Additional metadata
+  category: "technology",
+  classification: "Web Development Portfolio",
+  referrer: "origin-when-cross-origin",
+  
+  // Verification codes
+  verification: {
+    google: process.env.GOOGLE_VERIFICATION,
+    // yandex: process.env.YANDEX_VERIFICATION,
+    // yahoo: process.env.YAHOO_VERIFICATION,
+  },
+  
+  // Format detection (disable auto-linking)
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  
+  // Other important meta tags
+  other: {
+    "msapplication-TileColor": seoConfig.themeColor,
+    "msapplication-config": "/browserconfig.xml",
   },
 };
 
@@ -87,11 +102,54 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${cabinet.variable}`}>
-      <body className="font-sans">
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        
+        {/* DNS prefetch for third-party resources */}
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        
+        {/* Preload critical resources */}
+        <link
+          rel="preload"
+          href="/og-image.png"
+          as="image"
+          type="image/png"
+        />
+      </head>
+      <body className="font-sans bg-background text-foreground antialiased min-h-screen flex flex-col">
+        {/* Skip to main content - Accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
+        >
+          Skip to main content
+        </a>
+
+        {/* Navigation */}
         <Navbar />
-        <main>{children}</main>
+
+        {/* Main content */}
+        <main id="main-content" className="flex-grow">
+          {children}
+        </main>
+
+        {/* Footer */}
         <Footer />
+
+        {/* Floating contact button */}
+        <FloatingContactButton />
       </body>
     </html>
   );

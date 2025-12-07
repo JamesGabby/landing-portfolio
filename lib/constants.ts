@@ -1,14 +1,15 @@
+import { seoConfig } from "./seo.config";
+
 export const SITE_CONFIG = {
-  name: "James Gabbitus",
-  title: "James Gabbitus | AI Landing Page Developer for Startups",
-  description:
-    "I build high-converting, stunning AI landing pages for startups. Specializing in Next.js, Supabase, and Tailwind CSS to bring your AI product vision to life.",
-  url: "https://jamesgabbitus.com",
-  email: "jamesgabbitus@gmail.com",
+  name: seoConfig.siteName,
+  title: seoConfig.title,
+  description: seoConfig.description,
+  url: seoConfig.siteUrl,
+  email: seoConfig.author.email,
   socials: {
-    twitter: "https://twitter.com/jamesgabbitus",
-    github: "https://github.com/jamesgabbitus",
-    linkedin: "https://linkedin.com/in/jamesgabbitus",
+    twitter: seoConfig.author.twitter,
+    linkedin: seoConfig.author.linkedin,
+    github: seoConfig.author.github,
   },
 };
 

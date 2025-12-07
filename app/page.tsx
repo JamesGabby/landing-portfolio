@@ -1,3 +1,6 @@
+// src/app/page.tsx
+import { Metadata } from "next";
+import { generateMetadata } from "@/lib/metadata";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import Portfolio from "@/components/sections/Portfolio";
@@ -11,11 +14,27 @@ import PersonalTouch from "@/components/sections/PersonalTouch";
 import Testimonials from "@/components/sections/Testimonials";
 import Process from "@/components/sections/Process";
 import Contact from "@/components/sections/Contact";
-import FloatingContactButton from "@/components/ui/FloatingContactButton";
+
+// Homepage-specific metadata (optional - inherits from layout if not specified)
+export const metadata: Metadata = generateMetadata({
+  // Uses default title from seo.config.ts
+  canonical: "/",
+  // Add homepage-specific keywords if needed
+  keywords: [
+    "AI landing page developer",
+    "Next.js developer for hire",
+    "freelance web developer",
+    "startup landing pages",
+    "conversion optimization expert",
+    "React developer",
+    "hire web developer",
+    "portfolio website",
+  ],
+});
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <>
       <Hero />
       <Services />
       <Portfolio />
@@ -29,9 +48,6 @@ export default function Home() {
       <Testimonials />
       <Process />
       <Contact />
-      
-      {/* Floating contact button */}
-      <FloatingContactButton />
-    </div>
+    </>
   );
 }
