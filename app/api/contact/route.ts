@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { createClient } from '@supabase/supabase-js';
 import { validateContactForm, hasErrors } from "@/lib/validations/contact";
+import { sendNotificationEmail } from "@/lib/email";
 
 // Rate limiting map (in production, use Redis or similar)
 const rateLimitMap = new Map<string, { count: number; timestamp: number }>();
@@ -26,6 +27,18 @@ function checkRateLimit(ip: string): boolean {
 
 export async function POST(request: NextRequest) {
   try {
+    // Use service role key for server-side operations (bypasses RLS securely)
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!, // Service role for API routes
+      {
+        auth: {
+          persistSession: false,
+          autoRefreshToken: false,
+        }
+      }
+    );
+
     // Get IP for rate limiting
     const ip = request.headers.get("x-forwarded-for") || "unknown";
 
@@ -84,7 +97,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Optional: Send email notification
-    // await sendNotificationEmail(submissionData);
+    await sendNotificationEmail(submissionData);
 
     return NextResponse.json({
       success: true,
