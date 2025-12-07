@@ -19,3 +19,15 @@ export const NAV_LINKS = [
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
 ];
+
+// Extended navigation for footer or mobile menu
+export const EXTENDED_NAV_LINKS = [
+  { label: "Services", href: "#services" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "About", href: "#about" },
+  { label: "Tech Stack", href: "#stack" },
+  { label: "Process", href: "#process" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
+];

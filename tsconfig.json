@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/ui/8.6 — Main Process Section (src/components/sections/Process.tsx)"  ],
   "exclude": ["node_modules"]
 }
