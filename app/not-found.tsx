@@ -37,13 +37,13 @@ export default function NotFound() {
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild>
+          <Button>
             <Link href="/">
               <Home className="w-4 h-4" />
               Go Home
             </Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button variant="outline">
             <Link href="/#contact">
               <ArrowLeft className="w-4 h-4" />
               Contact Me

@@ -39,7 +39,7 @@ export default function Error({ error, reset }: ErrorProps) {
             <RefreshCw className="w-4 h-4" />
             Try Again
           </Button>
-          <Button variant="outline" asChild>
+          <Button variant="outline">
             <Link href="/">
               <Home className="w-4 h-4" />
               Go Home
