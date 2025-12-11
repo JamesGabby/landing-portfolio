@@ -120,7 +120,7 @@ export default function ContactSuccessModal({
                     rightIcon={<ArrowRight className="w-4 h-4" />}
                     onClick={() => {
                       window.open(
-                        "https://calendly.com/jamesgabbitus/discovery-call",
+                        "https://calendly.com/jamesgabbitus",
                         "_blank"
                       );
                       onClose();

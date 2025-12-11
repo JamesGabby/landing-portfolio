@@ -16,7 +16,7 @@ export const contactInfo = {
   timezone: "Flexible hours (UTC-friendly)",
   responseTime: "Usually within 2 hours",
   availability: "Currently accepting new projects",
-  calendlyUrl: "https://calendly.com/jamesgabbitus/discovery-call",
+  calendlyUrl: "https://calendly.com/jamesgabbitus",
 };
 
 export const socialLinks = [

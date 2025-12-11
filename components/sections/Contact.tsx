@@ -6,7 +6,6 @@ import {
   Sparkles,
   MessageSquare,
   Calendar,
-  Send,
   ArrowRight,
   CheckCircle,
   Zap,
@@ -220,7 +219,7 @@ export default function Contact() {
               rightIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
               onClick={() => {
                 window.open(
-                  "https://calendly.com/jamesgabbitus/discovery-call",
+                  "https://calendly.com/jamesgabbitus/",
                   "_blank"
                 );
               }}

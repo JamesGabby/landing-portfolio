@@ -41,7 +41,7 @@ const availableTimes = [
 ];
 
 export default function BookingCalendar({
-  calendarUrl = "https://calendly.com/jamesgabbitus/discovery-call",
+  calendarUrl = "https://calendly.com/jamesgabbitus",
   variant = "inline",
   className,
 }: BookingCalendarProps) {

@@ -1045,7 +1045,7 @@ const meetingInfo = {
 };
 
 const BookingCalendar = ({
-  calendarUrl = "https://calendly.com/jamesgabbitus/discovery-call",
+  calendarUrl = "https://calendly.com/jamesgabbitus",
 }: {
   calendarUrl?: string;
 }) => (

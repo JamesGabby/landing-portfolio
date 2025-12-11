@@ -27,7 +27,7 @@ export default function FloatingContactButton() {
   };
 
   const openCalendly = () => {
-    window.open("https://calendly.com/jamesgabbitus/discovery-call", "_blank");
+    window.open("https://calendly.com/jamesgabbitus", "_blank");
     setIsOpen(false);
   };
 
