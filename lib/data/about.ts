@@ -164,12 +164,12 @@ export const funFacts = [
   {
     icon: Headphones,
     label: "Coding playlist",
-    value: "Lo-fi beats",
+    value: "Podcasts",
   },
   {
     icon: Mountain,
     label: "When not coding",
-    value: "Hiking trails",
+    value: "At the gym, travelling or gaming",
   },
   {
     icon: Award,
@@ -181,7 +181,7 @@ export const funFacts = [
 export const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/jamesgabbitus",
+    url: "https://github.com/jamesgabby",
     icon: Github,
   },
   {
@@ -191,7 +191,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/jamesgabbitus",
+    url: "https://linkedin.com/in/james-gabbitus",
     icon: Linkedin,
   },
   {

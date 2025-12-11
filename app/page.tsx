@@ -45,7 +45,7 @@ export default function Home() {
       <Experience />
       <TechStack />
       <PersonalTouch />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Process />
       <Contact />
     </>
