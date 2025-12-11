@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -96,9 +97,15 @@ export default function Navbar() {
                 className="flex items-center gap-2 group"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
-                <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent group-hover:shadow-glow transition-shadow duration-300">
-                  <Sparkles className="w-5 h-5 text-white" />
-                </div>
+                <div className="relative flex items-center justify-center w-10 h-10">
+  <Image 
+    src={'/logo-blue.png'} 
+    height={80}      // Source image size (2x for retina)
+    width={80}       // Source image size (2x for retina)
+    alt="logo"
+    className="rounded-full w-10 h-10" // Display size
+  />
+</div>
                 <div className="flex flex-col">
                   <span className="text-lg font-bold text-foreground tracking-tight">
                     James
