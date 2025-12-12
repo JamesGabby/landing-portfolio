@@ -56,7 +56,7 @@ const CodeBlock = () => {
         <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-3xl" />
         
         {/* Code card */}
-        <div className="relative glass rounded-2xl p-6 border border-border/50 shadow-2xl">
+        <div className="relative glass rounded-2xl p-4 xl:p-6 border border-border/50 shadow-2xl">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-3 h-3 rounded-full bg-red-500" />
             <div className="w-3 h-3 rounded-full bg-yellow-500" />
@@ -64,7 +64,7 @@ const CodeBlock = () => {
             <span className="ml-2 text-xs text-muted font-mono">landing.tsx</span>
           </div>
           
-          <pre className="font-mono text-sm leading-relaxed">
+          <pre className="font-mono text-xs xl:text-sm leading-relaxed">
             <code>
               <span className="text-muted">{"// AI-powered conversion"}</span>
               {"\n"}
@@ -100,7 +100,7 @@ const CodeBlock = () => {
           <motion.span
             animate={{ opacity: [1, 0] }}
             transition={{ duration: 0.8, repeat: Infinity }}
-            className="inline-block w-2 h-5 bg-primary ml-1 align-middle"
+            className="inline-block w-2 h-4 xl:h-5 bg-primary ml-1 align-middle"
           />
         </div>
         
@@ -145,10 +145,10 @@ const MetricCard = ({
     transition={{ duration: 0.5, delay }}
     className="text-center"
   >
-    <div className="text-2xl sm:text-3xl font-bold text-foreground mb-1">
+    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-1">
       {value}
     </div>
-    <div className="text-sm text-muted-foreground">{label}</div>
+    <div className="text-xs sm:text-sm text-muted-foreground">{label}</div>
   </motion.div>
 );
 
@@ -167,12 +167,12 @@ const ClientLogos = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 1 }}
-      className="mt-16 pt-16 border-t border-border/50"
+      className="mt-12 sm:mt-16 pt-12 sm:pt-16 border-t border-border/50"
     >
-      <p className="text-sm text-muted-foreground text-center mb-8">
+      <p className="text-sm text-muted-foreground text-center mb-6 sm:mb-8">
         Trusted by innovative AI startups
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+      <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-12">
         {clients.map((client, index) => (
           <motion.div
             key={client}
@@ -181,8 +181,8 @@ const ClientLogos = () => {
             transition={{ duration: 0.3, delay: 1.2 + index * 0.1 }}
             className="text-muted hover:text-muted-foreground transition-colors duration-300"
           >
-            <div className="flex items-center gap-2 text-lg font-semibold opacity-50 hover:opacity-80 transition-opacity">
-              <Sparkles className="w-5 h-5" />
+            <div className="flex items-center gap-2 text-base sm:text-lg font-semibold opacity-50 hover:opacity-80 transition-opacity">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
               {client}
             </div>
           </motion.div>
@@ -192,7 +192,7 @@ const ClientLogos = () => {
   );
 };
 
-// ✅ FIX: Define variants with proper typing
+// Variants with proper typing
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -237,45 +237,45 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 lg:pt-20 pb-12 sm:pb-16">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Grid pattern */}
-        <div className="absolute inset-0 bg-grid" />
+        <div className="absolute inset-0 bg-grid opacity-50 sm:opacity-100" />
         
-        {/* Gradient orbs */}
+        {/* Gradient orbs - adjusted for mobile */}
         <motion.div
           style={{ y: y1 }}
-          className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/30 rounded-full blur-[128px]"
+          className="absolute top-1/4 -left-20 sm:-left-32 w-64 sm:w-96 h-64 sm:h-96 bg-primary/30 rounded-full blur-[128px]"
         />
         <motion.div
           style={{ y: y2 }}
-          className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-[128px]"
+          className="absolute bottom-1/4 -right-20 sm:-right-32 w-64 sm:w-96 h-64 sm:h-96 bg-accent/20 rounded-full blur-[128px]"
         />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-primary/5 rounded-full blur-[100px]" />
         
-        {/* Animated floating elements */}
+        {/* Animated floating elements - hidden on small screens */}
         <FloatingOrb
           delay={0}
-          className="absolute top-1/4 right-1/4 w-4 h-4 bg-primary/40 rounded-full blur-sm"
+          className="hidden sm:block absolute top-1/4 right-1/4 w-4 h-4 bg-primary/40 rounded-full blur-sm"
         />
         <FloatingOrb
           delay={1}
-          className="absolute bottom-1/3 left-1/4 w-3 h-3 bg-accent/40 rounded-full blur-sm"
+          className="hidden sm:block absolute bottom-1/3 left-1/4 w-3 h-3 bg-accent/40 rounded-full blur-sm"
         />
         <FloatingOrb
           delay={2}
-          className="absolute top-1/3 left-1/3 w-2 h-2 bg-primary/60 rounded-full"
+          className="hidden md:block absolute top-1/3 left-1/3 w-2 h-2 bg-primary/60 rounded-full"
         />
         
         {/* Noise texture overlay */}
-        <div className="absolute inset-0 bg-noise pointer-events-none" />
+        <div className="absolute inset-0 bg-noise pointer-events-none opacity-30 sm:opacity-100" />
       </div>
 
       {/* Main Content */}
-      <div className="relative section-padding w-full">
+      <div className="relative section-padding w-full px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <motion.div
               variants={containerVariants}
@@ -284,30 +284,31 @@ export default function Hero() {
               className="lg:col-span-7 text-center lg:text-left"
             >
               {/* Badge */}
-              <motion.div variants={itemVariants}>
+              <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
                 <Badge
                   icon={<Sparkles className="w-3 h-3" />}
-                  className="mb-6"
+                  className="mb-4 sm:mb-6"
                 >
-                  Available for Q1 2026 Projects
+                  <span className="text-xs sm:text-sm">Available for Q1 2026 Projects</span>
                 </Badge>
               </motion.div>
 
-              {/* Main Headline */}
+              {/* Main Headline - Improved sizing */}
               <motion.h1
                 variants={itemVariants}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold tracking-tight mb-4 sm:mb-6 leading-tight"
               >
                 I build{" "}
-                <span className="relative">
+                <span className="relative inline-block">
                   <span className="text-gradient">AI landing pages</span>
                   <motion.svg
                     initial={{ pathLength: 0, opacity: 0 }}
                     animate={{ pathLength: 1, opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
-                    className="absolute -bottom-2 left-0 w-full"
+                    className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-2 sm:h-3"
                     viewBox="0 0 200 12"
                     fill="none"
+                    preserveAspectRatio="none"
                   >
                     <path
                       d="M2 10C50 4 150 4 198 10"
@@ -323,7 +324,8 @@ export default function Hero() {
                     </defs>
                   </motion.svg>
                 </span>
-                <br />
+                <br className="hidden sm:block" />
+                <span className="sm:hidden"> </span>
                 that convert visitors into{" "}
                 <span className="relative inline-block">
                   users
@@ -331,15 +333,15 @@ export default function Hero() {
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 0.8, delay: 1.2 }}
-                    className="absolute bottom-2 left-0 h-3 bg-accent/20 -z-10"
+                    className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 bg-accent/20 -z-10"
                   />
                 </span>
               </motion.h1>
 
-              {/* Subheadline */}
+              {/* Subheadline - Better mobile sizing */}
               <motion.p
                 variants={itemVariants}
-                className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0"
+                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
                 Freelance Next.js developer specializing in high-converting, 
                 stunning landing pages for AI startups. I combine modern tech 
@@ -350,52 +352,52 @@ export default function Hero() {
                 .
               </motion.p>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons - Improved mobile layout */}
               <motion.div
                 variants={itemVariants}
-                className="flex flex-col sm:flex-row items-center gap-4 mb-12 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start"
               >
                 <Button
                   size="lg"
-                  rightIcon={<ArrowRight className="w-5 h-5" />}
+                  rightIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
                   onClick={() => {
                     document.getElementById("contact")?.scrollIntoView({
                       behavior: "smooth",
                       block: "start",
                     });
                   }}
+                  className="w-full sm:w-auto"
                 >
                   Start Your Project
                 </Button>
                 <Button
                   variant="secondary"
                   size="lg"
-                  leftIcon={<Play className="w-5 h-5" />}
+                  leftIcon={<Play className="w-4 h-4 sm:w-5 sm:h-5" />}
                   onClick={() => {
                     document.getElementById("portfolio")?.scrollIntoView({
                       behavior: "smooth",
                       block: "start",
                     });
                   }}
+                  className="w-full sm:w-auto"
                 >
                   View My Work
                 </Button>
               </motion.div>
 
-              {/* Quick Stats */}
+              {/* Quick Stats - Better mobile grid */}
               <motion.div
                 variants={itemVariants}
-                className="grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0"
+                className="grid grid-cols-3 gap-4 sm:gap-8 max-w-md mx-auto lg:mx-0"
               >
-                {/* <MetricCard value="50+" label="Projects Shipped" delay={0.8} /> */}
                 <MetricCard value="20+" label="Projects built" delay={0.8} />
-                {/* <MetricCard value="3x" label="Avg. Conversion Lift" delay={0.9} /> */}
-                <MetricCard value="99/100" label="Lighthouse Scores" delay={0.9} />
-                <MetricCard value="<24h" label="Response Time" delay={1.0} />
+                <MetricCard value="99/100" label="Lighthouse scores" delay={0.9} />
+                <MetricCard value="<24h" label="Response" delay={1.0} />
               </motion.div>
             </motion.div>
 
-            {/* Visual Element */}
+            {/* Visual Element - Only on large screens */}
             <div className="lg:col-span-5 relative hidden lg:block">
               <CodeBlock />
             </div>
@@ -406,21 +408,21 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Hidden on mobile */}
       <motion.div
         style={{ opacity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2"
       >
-        <span className="text-sm text-muted-foreground">Scroll to explore</span>
+        <span className="text-xs sm:text-sm text-muted-foreground">Scroll to explore</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border-2 border-border flex items-start justify-center p-2"
+          className="w-5 sm:w-6 h-8 sm:h-10 rounded-full border-2 border-border flex items-start justify-center p-2"
         >
           <motion.div
             animate={{ y: [0, 8, 0], opacity: [1, 0.5, 1] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1.5 h-1.5 rounded-full bg-primary"
+            className="w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-primary"
           />
         </motion.div>
       </motion.div>
