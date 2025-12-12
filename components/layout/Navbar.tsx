@@ -97,7 +97,7 @@ export default function Navbar() {
                 className="flex items-center gap-2 group"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
-                <div className="relative flex items-center justify-center w-10 h-10">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent">
                   <Image
                     src={'/jg-logo.png'}
                     height={80}      // Source image size (2x for retina)

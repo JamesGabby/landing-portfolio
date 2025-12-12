@@ -242,7 +242,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
               className="space-y-8"
             >
-                            {/* Quick Info */}
+              {/* Quick Info */}
               <div className="flex flex-wrap items-center gap-4">
                 <Badge variant="accent" icon={<MapPin className="w-3 h-3" />}>
                   {personalInfo.location}
