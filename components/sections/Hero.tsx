@@ -387,8 +387,8 @@ export default function Hero() {
                 variants={itemVariants}
                 className="grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0"
               >
-                <MetricCard value="50+" label="Projects Shipped" delay={0.8} />
-                <MetricCard value="3x" label="Avg. Conversion Lift" delay={0.9} />
+                {/* <MetricCard value="50+" label="Projects Shipped" delay={0.8} />
+                <MetricCard value="3x" label="Avg. Conversion Lift" delay={0.9} /> */}
                 <MetricCard value="<48h" label="Response Time" delay={1.0} />
               </motion.div>
             </motion.div>
@@ -400,7 +400,7 @@ export default function Hero() {
           </div>
 
           {/* Client Logos */}
-          <ClientLogos />
+          {/* <ClientLogos /> */}
         </div>
       </div>
 

@@ -3,13 +3,13 @@ import {
   Palette,
   Zap,
   Database,
-  Globe,
+  Mic,
   Sparkles,
   Rocket,
   Users,
   Award,
   Coffee,
-  Headphones,
+  Dumbbell,
   Mountain,
   Github,
   Twitter,
@@ -118,21 +118,21 @@ export const expertise = [
 
 export const experience = [
   {
-    period: "2022 - Present",
+    period: "2025 - Present",
     title: "Freelance Next.js Developer",
     company: "Self-employed",
     description:
-      "Specializing in AI startup landing pages and web applications. Worked with 30+ startups across the globe.",
+      "Specializing in AI startup landing pages and web applications.", // Worked with 30+ startups across the globe.
     highlights: [
-      "Built 50+ landing pages for AI startups",
-      "Average conversion increase of 340%",
+      "Built Lessonly - an AI powered education powerhouse for teachers and tutors", // Built 50+ landing pages for AI startups
+      "", // Average conversion increase of 340%
       "Maintained 100% client satisfaction rate",
     ],
   },
   {
-    period: "2020 - 2022",
-    title: "Senior Frontend Developer",
-    company: "Tech Startup (YC-backed)",
+    period: "2023 - 2024",
+    title: "Lead Full-Stack Developer",
+    company: "FinTech Startup (YC-backed)",
     description:
       "Led frontend development for a Series A startup, building their customer-facing platform from scratch.",
     highlights: [
@@ -162,12 +162,12 @@ export const funFacts = [
     value: "∞ cups",
   },
   {
-    icon: Headphones,
+    icon: Mic,
     label: "Coding playlist",
     value: "Podcasts",
   },
   {
-    icon: Mountain,
+    icon: Dumbbell,
     label: "When not coding",
     value: "At the gym, travelling or gaming",
   },

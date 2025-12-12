@@ -27,7 +27,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = NAV_LINKS.map((link) => link.href.replace("#", ""));
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -59,10 +59,10 @@ export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    
+
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
-    
+
     if (element) {
       const offset = 80; // Account for fixed navbar
       const elementPosition = element.getBoundingClientRect().top;
@@ -98,14 +98,14 @@ export default function Navbar() {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 <div className="relative flex items-center justify-center w-10 h-10">
-  <Image 
-    src={'/logo-blue.png'} 
-    height={80}      // Source image size (2x for retina)
-    width={80}       // Source image size (2x for retina)
-    alt="logo"
-    className="rounded-full w-10 h-10" // Display size
-  />
-</div>
+                  <Image
+                    src={'/jg-logo.png'}
+                    height={80}      // Source image size (2x for retina)
+                    width={80}       // Source image size (2x for retina)
+                    alt="logo"
+                    className="rounded-full w-10 h-10" // Display size
+                  />
+                </div>
                 <div className="flex flex-col">
                   <span className="text-lg font-bold text-foreground tracking-tight">
                     James

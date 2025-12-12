@@ -63,19 +63,18 @@ export default function PersonalTouch() {
 
               {/* Testimonial snippet */}
               <div className="p-6 bg-background border border-border rounded-2xl">
-                <p className="text-foreground italic mb-4">
-                  "James feels less like a contractor and more like a co-founder.
-                  His dedication to our project was incredible."
+                <p className="text-foreground italic mb-4"> {/*"James feels less like a contractor and more like a co-founder. His dedication to our project was incredible." */}
+                  "James was a real asset to the team. A master of juggling multiple tasks, keeping them to a high standard, all while continuing to improve and master his development skills. Always conscientious and diligent, James would approach every task with enthusiasm and out the box thinking. I wouldn't hesitate to work with James again."
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="text-sm font-medium text-primary">SC</span>
+                    <span className="text-sm font-medium text-primary">OG</span>
                   </div>
                   <div>
                     <p className="text-sm font-medium text-foreground">
-                      Sarah Chen
+                      Oli Galvin-Jones
                     </p>
-                    <p className="text-xs text-muted-foreground">CEO, Neural AI</p>
+                    <p className="text-xs text-muted-foreground">Client Manager, FLOAT</p>
                   </div>
                 </div>
               </div>
