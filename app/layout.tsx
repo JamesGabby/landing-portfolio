@@ -8,6 +8,7 @@ import { viewport as viewportConfig } from "./viewport";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FloatingContactButton from "@/components/ui/FloatingContactButton";
+import { Analytics } from "@vercel/analytics/next";
 
 // Font optimization with display swap for better CLS
 const inter = Inter({
@@ -151,6 +152,7 @@ export default function RootLayout({
         {/* Floating contact button */}
         <FloatingContactButton />
       </body>
+      <Analytics />
     </html>
   );
 }
