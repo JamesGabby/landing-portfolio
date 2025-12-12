@@ -390,7 +390,7 @@ export default function Hero() {
                 {/* <MetricCard value="50+" label="Projects Shipped" delay={0.8} /> */}
                 <MetricCard value="20+" label="Projects built" delay={0.8} />
                 {/* <MetricCard value="3x" label="Avg. Conversion Lift" delay={0.9} /> */}
-                <MetricCard value="99/100" label="Avg. Lighthouse Score" delay={0.9} />
+                <MetricCard value="99/100" label="Lighthouse Scores" delay={0.9} />
                 <MetricCard value="<24h" label="Response Time" delay={1.0} />
               </motion.div>
             </motion.div>
