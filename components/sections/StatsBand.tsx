@@ -6,7 +6,7 @@ import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const stats = [
   {
-    value: 50,
+    value: 20,
     suffix: "+",
     label: "Projects Completed",
   },
@@ -15,10 +15,15 @@ const stats = [
     suffix: "+",
     label: "Years Experience",
   },
+  // {
+  //   value: 30,
+  //   suffix: "+",
+  //   label: "Happy Clients",
+  // },
   {
-    value: 30,
+    value: 95,
     suffix: "+",
-    label: "Happy Clients",
+    label: "Average Lighthouse Score",
   },
   {
     value: 100,
