@@ -6,9 +6,9 @@ export const projects: Project[] = [
     title: "Lessonly",
     subtitle: "AI Lesson Planning Platform",
     description:
-      "A comprehensive landing page for an AI-powered writing assistant startup. The design focuses on demonstrating the product's capabilities through interactive demos and clear value propositions.",
+      "Generate fully curriculum-aligned lessons in seconds, with AI that actually understands the UK National Curriculum and adapts content to different key stages and abilities.",
     longDescription:
-      "Neural AI needed a landing page that could effectively communicate their complex AI technology to a non-technical audience. I created an immersive experience with live demos, animated feature showcases, and a conversion-optimized layout that increased their sign-up rate by 340%.",
+      "Generate fully curriculum-aligned lessons in seconds, with AI that actually understands the UK National Curriculum and adapts content to different key stages and abilities. Everything then lives in one clean, unified dashboard, so whether you’re teaching a class or tutoring one-to-one, you’re not jumping between tools.",
     image: "/lessonlyy.png",
     images: [
       "/projects/neural-ai-1.jpg",
@@ -34,6 +34,40 @@ export const projects: Project[] = [
     },
     year: "2025",
     duration: "8 weeks",
+  },
+  {
+    id: "repurpose-ai",
+    title: "RepurposeAI",
+    subtitle: "Repurpose AI Landing Page",
+    description:
+      "A comprehensive landing page for an AI Content Repurposing Tool that automatically converts blog posts into social media threads, newsletters, video scripts, and podcasts. The design focuses on demonstrating the product's capabilities through interactive demos and clear value propositions.",
+    longDescription:
+      "A comprehensive landing page for an AI Content Repurposing Tool that automatically converts blog posts into social media threads, newsletters, video scripts, and podcasts. The design focuses on demonstrating the product's capabilities through interactive demos and clear value propositions.",
+    image: "/repurpose.png",
+    images: [
+      "/projects/neural-ai-1.jpg",
+      "/projects/neural-ai-2.jpg",
+      "/projects/neural-ai-3.jpg",
+    ],
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "ShadCN"],
+    category: "Landing Page",
+    liveUrl: "https://repurpose-ai-delta.vercel.app/",
+    caseStudyUrl: "/case-studies/neural-ai",
+    featured: true,
+    metrics: [
+      { label: "Conversion Rate", value: "+340%" },
+      { label: "Page Speed", value: "98/100" },
+      { label: "Time on Site", value: "+180%" },
+    ],
+    testimonial: {
+      quote:
+        "James transformed our complex AI product into a compelling story. Our conversion rates have never been higher.",
+      author: "Sarah Chen",
+      role: "CEO, Neural AI",
+      avatar: "/testimonials/sarah.jpg",
+    },
+    year: "2025",
+    duration: "4 days",
   },
   // {
   //   id: "neural-ai",
