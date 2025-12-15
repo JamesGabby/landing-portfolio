@@ -28,13 +28,13 @@ export const projects: Project[] = [
       { label: "Best Practices", value: "100%" },
       { label: "SEO", value: "100%" },
     ],
-    testimonial: {
-      quote:
-        "James transformed our complex AI product into a compelling story. Our conversion rates have never been higher.",
-      author: "Sarah Chen",
-      role: "CEO, Neural AI",
-      avatar: "/testimonials/sarah.jpg",
-    },
+    // testimonial: {
+    //   quote:
+    //     "James transformed our complex AI product into a compelling story. Our conversion rates have never been higher.",
+    //   author: "Sarah Chen",
+    //   role: "CEO, Neural AI",
+    //   avatar: "/testimonials/sarah.jpg",
+    // },
     year: "2025",
     duration: "8 weeks",
   },
@@ -62,13 +62,13 @@ export const projects: Project[] = [
       { label: "Best Practices", value: "100%" },
       { label: "SEO", value: "100%" },
     ],
-    testimonial: {
-      quote:
-        "James transformed our complex AI product into a compelling story. Our conversion rates have never been higher.",
-      author: "Sarah Chen",
-      role: "CEO, Neural AI",
-      avatar: "/testimonials/sarah.jpg",
-    },
+    // testimonial: {
+    //   quote:
+    //     "James transformed our complex AI product into a compelling story. Our conversion rates have never been higher.",
+    //   author: "Sarah Chen",
+    //   role: "CEO, Neural AI",
+    //   avatar: "/testimonials/sarah.jpg",
+    // },
     year: "2025",
     duration: "4 days",
   },
