@@ -25,6 +25,7 @@ function ProjectImage({
   fill = true,
   className,
   sizes,
+  quality = 85,
 }: {
   src: string;
   alt: string;
@@ -33,6 +34,7 @@ function ProjectImage({
   fill?: boolean;
   className?: string;
   sizes?: string;
+  quality?: number;
 }) {
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -58,6 +60,9 @@ function ProjectImage({
         src={src}
         alt={alt}
         fill={fill}
+        unoptimized  
+        quality={quality}
+        priority
         className={cn(
           className,
           isLoading ? "opacity-0" : "opacity-100",
@@ -143,9 +148,9 @@ export default function ProjectCard({
         }}
         className="group relative"
       >
-        <div className="grid lg:grid-cols-2 gap-0 lg:gap-8 items-center bg-card border border-border rounded-2xl lg:rounded-3xl overflow-hidden hover:border-primary/30 transition-colors duration-300">
-          {/* Image */}
-          <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[400px] xl:min-h-[450px] overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-0 lg:gap-6 items-center bg-card border border-border rounded-2xl lg:rounded-3xl overflow-hidden hover:border-primary/30 transition-colors duration-300">
+          {/* Image - Reduced by 20% */}
+          <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[320px] xl:min-h-[360px] overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent z-10 lg:hidden" />
             <ProjectImage
               src={project.image}
@@ -153,7 +158,8 @@ export default function ProjectCard({
               title={project.title}
               category={project.category}
               className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 640px"
+              quality={90}
             />
             
             {/* Desktop Overlay on hover */}
@@ -177,9 +183,9 @@ export default function ProjectCard({
           </div>
 
           {/* Content */}
-          <div className="p-5 sm:p-6 lg:p-8 xl:p-12">
+          <div className="p-4 sm:p-5 lg:p-6 xl:p-10">
             {/* Category & Year - Desktop only */}
-            <div className="hidden lg:flex items-center gap-3 mb-4">
+            <div className="hidden lg:flex items-center gap-3 mb-3">
               <Badge variant="default">{project.category}</Badge>
               {project.year && (
                 <span className="text-sm text-muted-foreground">
@@ -189,38 +195,38 @@ export default function ProjectCard({
             </div>
 
             {/* Title & Description */}
-            <h3 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold text-foreground mb-2">
+            <h3 className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-bold text-foreground mb-2">
               {project.title}
             </h3>
             {project.subtitle && (
-              <p className="text-base sm:text-lg text-primary mb-3 sm:mb-4">
+              <p className="text-sm sm:text-base text-primary mb-2 sm:mb-3">
                 {project.subtitle}
               </p>
             )}
-            <p className="text-sm sm:text-base text-muted-foreground mb-5 sm:mb-6 line-clamp-3 sm:line-clamp-4">
+            <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-5 line-clamp-3 sm:line-clamp-4">
               {project.description}
             </p>
 
             {/* Metrics */}
             {project.metrics && project.metrics.length > 0 && (
-              <div className="mb-6 sm:mb-8">
-                <div className="p-3 sm:p-4 bg-background/50 rounded-xl sm:rounded-2xl border border-border/30">
+              <div className="mb-5 sm:mb-6">
+                <div className="p-2.5 sm:p-3 bg-background/50 rounded-lg sm:rounded-xl border border-border/30">
                   {/* Inline Banner */}
-                  <div className="flex items-center justify-center gap-1.5 mb-3 pb-3 border-b border-border/30">
-                    <Zap className="w-3.5 h-3.5 text-yellow-500" />
-                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  <div className="flex items-center justify-center gap-1.5 mb-2.5 pb-2.5 border-b border-border/30">
+                    <Zap className="w-3 h-3 text-yellow-500" />
+                    <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                       Lighthouse Scores
                     </span>
                   </div>
                   
                   {/* Metrics Grid */}
-                  <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3">
                     {project.metrics.map((metric, i) => (
                       <div key={i} className="text-center">
-                        <div className="text-base sm:text-lg xl:text-xl font-bold text-foreground">
+                        <div className="text-sm sm:text-base xl:text-lg font-bold text-foreground">
                           {metric.value}
                         </div>
-                        <div className="text-xs text-muted-foreground leading-tight mt-0.5">
+                        <div className="text-[10px] sm:text-xs text-muted-foreground leading-tight mt-0.5">
                           {metric.label}
                         </div>
                       </div>
@@ -231,11 +237,11 @@ export default function ProjectCard({
             )}
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-5 sm:mb-6">
+            <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-4 sm:mb-5">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 sm:px-3 py-1 text-xs font-medium bg-card border border-border rounded-full text-muted-foreground"
+                  className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium bg-card border border-border rounded-full text-muted-foreground"
                 >
                   {tag}
                 </span>
@@ -243,22 +249,22 @@ export default function ProjectCard({
             </div>
 
             {/* Actions */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
               <button
                 onClick={() => onViewDetails(project)}
-                className="btn-primary flex-1 sm:flex-initial justify-center"
+                className="btn-primary flex-1 sm:flex-initial justify-center text-sm"
               >
                 View Case Study
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-secondary flex-1 sm:flex-initial justify-center"
+                  className="btn-secondary flex-1 sm:flex-initial justify-center text-sm"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                   <span>Live Site</span>
                 </a>
               )}
@@ -287,16 +293,16 @@ export default function ProjectCard({
       }}
       className="group relative h-full"
     >
-      <div className="relative bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-glow-sm h-full flex flex-col">
-        {/* Image */}
-        <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden">
+      <div className="relative bg-card border border-border rounded-lg sm:rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-300 hover:shadow-glow-sm h-full flex flex-col">
+        {/* Image - Reduced by 20% */}
+        <div className="relative aspect-[16/9] sm:aspect-[16/8] overflow-hidden">
           <ProjectImage
             src={project.image}
             alt={project.title}
             title={project.title}
             category={project.category}
             className="object-cover transition-transform duration-700 group-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 26vw"
           />
 
           {/* Hover Overlay - Desktop only */}
@@ -304,14 +310,14 @@ export default function ProjectCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: !isMobile && isHovered ? 1 : 0 }}
             transition={{ duration: 0.3 }}
-            className="hidden sm:flex absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent items-end justify-center pb-6"
+            className="hidden sm:flex absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent items-end justify-center pb-5"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <button
                 onClick={() => onViewDetails(project)}
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors"
+                className="flex items-center gap-2 px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-medium hover:bg-primary-hover transition-colors"
               >
-                <Eye className="w-4 h-4" />
+                <Eye className="w-3.5 h-3.5" />
                 View Details
               </button>
               {project.liveUrl && (
@@ -319,22 +325,22 @@ export default function ProjectCard({
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-white/20 transition-colors"
+                  className="flex items-center justify-center w-8 h-8 bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-white/20 transition-colors"
                   aria-label="View live site"
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
             </div>
           </motion.div>
 
           {/* Category & Featured badges */}
-          <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 z-10 flex items-center justify-between">
-            <Badge variant="default" className="backdrop-blur-sm bg-background/90 text-xs sm:text-sm">
+          <div className="absolute top-2 sm:top-3 left-2 sm:left-3 right-2 sm:right-3 z-10 flex items-center justify-between">
+            <Badge variant="default" className="backdrop-blur-sm bg-background/90 text-[10px] sm:text-xs">
               {project.category}
             </Badge>
             {project.featured && (
-              <Badge variant="accent" className="backdrop-blur-sm bg-background/90 text-xs sm:text-sm">
+              <Badge variant="accent" className="backdrop-blur-sm bg-background/90 text-[10px] sm:text-xs">
                 Featured
               </Badge>
             )}
@@ -342,33 +348,33 @@ export default function ProjectCard({
         </div>
 
         {/* Content */}
-        <div className="p-4 sm:p-5 lg:p-6 flex-1 flex flex-col">
-          <h3 className="text-base sm:text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">
+        <div className="p-3 sm:p-4 lg:p-5 flex-1 flex flex-col">
+          <h3 className="text-sm sm:text-base font-semibold text-foreground mb-1 group-hover:text-primary transition-colors line-clamp-2">
             {project.title}
           </h3>
           {project.subtitle && (
-            <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3 line-clamp-1">
+            <p className="text-[10px] sm:text-xs text-muted-foreground mb-1.5 sm:mb-2 line-clamp-1">
               {project.subtitle}
             </p>
           )}
 
           {/* Description */}
-          <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 line-clamp-2 flex-1">
+          <p className="text-[10px] sm:text-xs text-muted-foreground mb-2 sm:mb-3 line-clamp-2 flex-1">
             {project.description}
           </p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-3 sm:mb-0">
+          <div className="flex flex-wrap gap-1 mb-2 sm:mb-0">
             {project.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-0.5 text-[10px] sm:text-xs bg-background border border-border rounded text-muted-foreground"
+                className="px-1.5 py-0.5 text-[9px] sm:text-[10px] bg-background border border-border rounded text-muted-foreground"
               >
                 {tag}
               </span>
             ))}
             {project.tags.length > 3 && (
-              <span className="px-2 py-0.5 text-[10px] sm:text-xs text-muted-foreground">
+              <span className="px-1.5 py-0.5 text-[9px] sm:text-[10px] text-muted-foreground">
                 +{project.tags.length - 3}
               </span>
             )}
@@ -376,13 +382,13 @@ export default function ProjectCard({
 
           {/* Metrics preview */}
           {project.metrics && project.metrics.length > 0 && (
-            <div className="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-border">
+            <div className="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-border">
               {project.metrics.slice(0, 2).map((metric, i) => (
-                <div key={i} className="flex items-center gap-1.5 sm:gap-2">
-                  <span className="text-xs sm:text-sm font-semibold text-primary">
+                <div key={i} className="flex items-center gap-1 sm:gap-1.5">
+                  <span className="text-[10px] sm:text-xs font-semibold text-primary">
                     {metric.value}
                   </span>
-                  <span className="text-[10px] sm:text-xs text-muted-foreground">
+                  <span className="text-[9px] sm:text-[10px] text-muted-foreground">
                     {metric.label}
                   </span>
                 </div>
@@ -393,10 +399,10 @@ export default function ProjectCard({
           {/* Mobile: Action button */}
           <button
             onClick={() => onViewDetails(project)}
-            className="sm:hidden mt-4 w-full btn-primary text-sm justify-center"
+            className="sm:hidden mt-3 w-full btn-primary text-xs justify-center"
           >
             View Details
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>

@@ -5,15 +5,28 @@ const nextConfig = {
   reactStrictMode: true,
 
   // Image optimization
-  images: {
-    formats: ["image/avif", "image/webp"],
+  images: {    
+    // Define device sizes for responsive images
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    
+    // Define image sizes for the `sizes` prop
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512, 640, 750],
+    
+    // Formats to use (WebP is more efficient, AVIF is even better but slower)
+    formats: ['image/avif', 'image/webp'],
+    
+    // If using external images, add domains
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
+        protocol: 'https',
+        hostname: 'jamesgabbitus.dev',
       },
-      // Add other domains as needed
+      // Add more as needed
     ],
+    
+    // Disable size limit warning if using large images
+    // dangerouslyAllowSVG: true,
+    // contentDispositionType: 'attachment',
   },
 
   // Security headers
