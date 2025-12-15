@@ -125,7 +125,7 @@ export const experience = [
       "Specializing in AI startup landing pages and web applications.", // Worked with 30+ startups across the globe.
     highlights: [
       "Built Lessonly - an AI powered education powerhouse for teachers and tutors", // Built 50+ landing pages for AI startups
-      "", // Average conversion increase of 340%
+       // Average conversion increase of 340%
       "Maintained 100% client satisfaction rate",
     ],
   },
@@ -142,7 +142,7 @@ export const experience = [
     ],
   },
   {
-    period: "2018 - 2020",
+    period: "2020 - 2023",
     title: "Full Stack Developer",
     company: "Digital Agency",
     description:
