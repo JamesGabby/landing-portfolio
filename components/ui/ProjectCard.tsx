@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Eye } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Eye, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types";
 import Badge from "@/components/ui/Badge";
@@ -203,17 +203,30 @@ export default function ProjectCard({
 
             {/* Metrics */}
             {project.metrics && project.metrics.length > 0 && (
-              <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8 p-3 sm:p-4 bg-background/50 rounded-xl sm:rounded-2xl">
-                {project.metrics.map((metric, i) => (
-                  <div key={i} className="text-center">
-                    <div className="text-base sm:text-lg xl:text-xl font-bold text-foreground">
-                      {metric.value}
-                    </div>
-                    <div className="text-xs text-muted-foreground leading-tight mt-0.5">
-                      {metric.label}
-                    </div>
+              <div className="mb-6 sm:mb-8">
+                <div className="p-3 sm:p-4 bg-background/50 rounded-xl sm:rounded-2xl border border-border/30">
+                  {/* Inline Banner */}
+                  <div className="flex items-center justify-center gap-1.5 mb-3 pb-3 border-b border-border/30">
+                    <Zap className="w-3.5 h-3.5 text-yellow-500" />
+                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                      Lighthouse Scores
+                    </span>
                   </div>
-                ))}
+                  
+                  {/* Metrics Grid */}
+                  <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                    {project.metrics.map((metric, i) => (
+                      <div key={i} className="text-center">
+                        <div className="text-base sm:text-lg xl:text-xl font-bold text-foreground">
+                          {metric.value}
+                        </div>
+                        <div className="text-xs text-muted-foreground leading-tight mt-0.5">
+                          {metric.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
 
