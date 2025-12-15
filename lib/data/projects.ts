@@ -52,7 +52,7 @@ export const projects: Project[] = [
       "/projects/neural-ai-2.jpg",
       "/projects/neural-ai-3.jpg",
     ],
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "ShadCN"],
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Shadcn"],
     category: "AI Landing Page",
     liveUrl: "https://repurpose-ai-delta.vercel.app/",
     caseStudyUrl: "/case-studies/neural-ai",
