@@ -9,12 +9,23 @@ import {
   ArrowRight,
   HelpCircle,
   Zap,
+  Tag,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { packages } from "@/lib/data/services";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
+
+// Calculate discount percentage
+const getDiscountPercentage = (original: number, discounted: number) => {
+  return Math.round(((original - discounted) / original) * 100);
+};
+
+// Utility function to format price with commas
+const formatPrice = (price: number) => {
+  return price.toLocaleString('en-US');
+};
 
 // Pricing Card Component
 const PricingCard = ({
@@ -25,6 +36,11 @@ const PricingCard = ({
   index: number;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  
+  const hasDiscount = pkg.discount_price && pkg.discount_price < pkg.price;
+  const discountPercentage = hasDiscount 
+    ? getDiscountPercentage(pkg.price, pkg.discount_price!) 
+    : 0;
 
   return (
     <motion.div
@@ -54,6 +70,32 @@ const PricingCard = ({
         </div>
       )}
 
+      {/* Discount badge */}
+      {hasDiscount && !pkg.popular && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+          <Badge
+            variant="accent"
+            icon={<Tag className="w-3 h-3" />}
+            className="shadow-lg bg-gradient-to-r from-emerald-500 to-green-500 text-white border-0"
+          >
+            Save {discountPercentage}%
+          </Badge>
+        </div>
+      )}
+
+      {/* Popular + Discount badge - stacked */}
+      {hasDiscount && pkg.popular && (
+        <div className="absolute -top-4 right-4">
+          <Badge
+            variant="accent"
+            icon={<Tag className="w-3 h-3" />}
+            className="shadow-lg bg-gradient-to-r from-emerald-500 to-green-500 text-white border-0"
+          >
+            Save {discountPercentage}%
+          </Badge>
+        </div>
+      )}
+
       <div className="p-8">
         {/* Header */}
         <div className="text-center mb-8">
@@ -62,12 +104,34 @@ const PricingCard = ({
           </h3>
           <p className="text-sm text-muted-foreground mb-6">{pkg.description}</p>
 
-          {/* Price */}
-          <div className="flex items-baseline justify-center gap-1">
-            <span className="text-2xl text-muted-foreground">$</span>
-            <span className="text-5xl font-bold text-foreground">{pkg.price}</span>
+          {/* Price with discount */}
+          <div className="flex flex-col items-center gap-1">
+            {hasDiscount && (
+              <div className="flex items-center gap-2">
+                <span className="text-lg text-muted-foreground line-through decoration-2">
+                  ${formatPrice(pkg.price)}
+                </span>
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">
+                  -{discountPercentage}% OFF
+                </span>
+              </div>
+            )}
+            <div className="flex items-baseline justify-center gap-1">
+              <span className="text-2xl text-muted-foreground">$</span>
+              <span className={cn(
+                "font-bold text-foreground",
+                hasDiscount ? "text-4xl text-emerald-500" : "text-5xl"
+              )}>
+                {hasDiscount ? formatPrice(pkg.discount_price!) : formatPrice(pkg.price)}
+              </span>
+            </div>
+            {hasDiscount && (
+              <p className="text-xs text-emerald-500 font-medium mt-1">
+                You save ${formatPrice(pkg.price - pkg.discount_price!)}
+              </p>
+            )}
           </div>
-          <p className="text-sm text-muted-foreground mt-2">
+          <p className="text-sm text-muted-foreground mt-3">
             Delivery: {pkg.duration}
           </p>
         </div>
@@ -109,6 +173,14 @@ const PricingCard = ({
         >
           {pkg.cta}
         </Button>
+
+        {/* Limited time indicator for discounted items */}
+        {hasDiscount && (
+          <p className="text-center text-xs text-muted-foreground mt-4 flex items-center justify-center gap-1">
+            <Sparkles className="w-3 h-3 text-emerald-500" />
+            Limited time offer
+          </p>
+        )}
       </div>
 
       {/* Hover glow effect */}
@@ -212,6 +284,9 @@ const PricingFAQ = () => {
 
 // Main Pricing Component
 export default function Pricing() {
+  // Check if any package has a discount
+  const hasAnyDiscount = packages.some(pkg => pkg.discount_price && pkg.discount_price < pkg.price);
+
   return (
     <section id="pricing" className="py-24 lg:py-32 relative overflow-hidden bg-card/50">
       {/* Background elements */}
@@ -220,6 +295,34 @@ export default function Pricing() {
 
       <div className="relative section-padding">
         <div className="container-custom">
+          {/* Limited Time Banner */}
+          {hasAnyDiscount && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-12 flex justify-center"
+            >
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/10 via-green-500/10 to-emerald-500/10 border border-emerald-500/20">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span className="text-sm font-semibold text-emerald-500">
+                    Limited Time Offer
+                  </span>
+                </div>
+                <span className="text-sm text-muted-foreground">
+                  Save up to {Math.max(...packages.map(pkg => 
+                    pkg.discount_price ? getDiscountPercentage(pkg.price, pkg.discount_price) : 0
+                  ))}% on select packages
+                </span>
+              </div>
+            </motion.div>
+          )}
+
           {/* Section Header */}
           <SectionHeader
             badge="Pricing"
