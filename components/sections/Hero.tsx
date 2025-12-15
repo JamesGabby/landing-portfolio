@@ -392,7 +392,7 @@ export default function Hero() {
                 className="grid grid-cols-3 gap-4 sm:gap-8 max-w-md mx-auto lg:mx-0"
               >
                 <MetricCard value="20+" label="Projects built" delay={0.8} />
-                <MetricCard value="95+" label="Lighthouse scores" delay={0.9} />
+                <MetricCard value="96+" label="Lighthouse scores" delay={0.9} />
                 <MetricCard value="<24h" label="Response" delay={1.0} />
               </motion.div>
             </motion.div>

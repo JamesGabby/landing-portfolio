@@ -305,7 +305,7 @@ export default function About() {
                 >
                   Work With Me
                 </Button>
-                <Button
+                {/* <Button
                   variant="secondary"
                   size="lg"
                   leftIcon={<Download className="w-5 h-5" />}
@@ -315,7 +315,7 @@ export default function About() {
                   }}
                 >
                   Download Resume
-                </Button>
+                </Button> */}
               </div>
 
               {/* Social Links */}
