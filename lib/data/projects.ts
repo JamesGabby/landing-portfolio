@@ -21,9 +21,12 @@ export const projects: Project[] = [
     caseStudyUrl: "/case-studies/neural-ai",
     featured: true,
     metrics: [
-      { label: "Conversion Rate", value: "+340%" },
-      { label: "Page Speed", value: "98/100" },
-      { label: "Time on Site", value: "+180%" },
+      // { label: "Conversion Rate", value: "+340%" },
+      // { label: "Page Speed", value: "98/100" },
+      // { label: "Time on Site", value: "+180%" },
+      { label: "Performance", value: "99%" },
+      { label: "Best Practices", value: "100%" },
+      { label: "SEO", value: "100%" },
     ],
     testimonial: {
       quote:
@@ -40,7 +43,7 @@ export const projects: Project[] = [
     title: "RepurposeAI",
     subtitle: "Repurpose AI Landing Page",
     description:
-      "A comprehensive landing page for an AI Content Repurposing Tool that automatically converts blog posts into social media threads, newsletters, video scripts, and podcasts. The design focuses on demonstrating the product's capabilities through interactive demos and clear value propositions.",
+      "A comprehensive landing page for an AI Content Repurposing Tool that automatically converts blog posts into social media threads, newsletters, video scripts, and podcasts. ",
     longDescription:
       "A comprehensive landing page for an AI Content Repurposing Tool that automatically converts blog posts into social media threads, newsletters, video scripts, and podcasts. The design focuses on demonstrating the product's capabilities through interactive demos and clear value propositions.",
     image: "/repurpose.png",
@@ -50,14 +53,14 @@ export const projects: Project[] = [
       "/projects/neural-ai-3.jpg",
     ],
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "ShadCN"],
-    category: "Landing Page",
+    category: "AI Landing Page",
     liveUrl: "https://repurpose-ai-delta.vercel.app/",
     caseStudyUrl: "/case-studies/neural-ai",
     featured: true,
     metrics: [
-      { label: "Conversion Rate", value: "+340%" },
-      { label: "Page Speed", value: "98/100" },
-      { label: "Time on Site", value: "+180%" },
+      { label: "Performance", value: "100%" },
+      { label: "Best Practices", value: "100%" },
+      { label: "SEO", value: "100%" },
     ],
     testimonial: {
       quote:
