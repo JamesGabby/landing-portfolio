@@ -36,7 +36,7 @@ export const processSteps = [
     description:
       "Based on our discovery call, I create a comprehensive strategy document outlining the site structure, key messaging, conversion points, and technical approach. We refine this together until it's perfect.",
     icon: Lightbulb,
-    duration: "2-3 days",
+    duration: "1-2 days",
     deliverables: [
       "Content strategy",
       "Site architecture",
@@ -50,9 +50,9 @@ export const processSteps = [
     title: "UI/UX Design",
     shortTitle: "Design",
     description:
-      "I design high-fidelity mockups in Figma, focusing on visual hierarchy, user experience, and conversion optimization. You'll see exactly how your site will look before any code is written.",
+      "I design high-fidelity mockups in Figma, focusing on visual hierarchy, user experience, and conversion optimization.", //You'll see exactly how your site will look before any code is written.
     icon: PenTool,
-    duration: "3-5 days",
+    duration: "1-2 days",
     deliverables: [
       "Figma design files",
       "Desktop & mobile designs",
@@ -68,7 +68,7 @@ export const processSteps = [
     description:
       "Using Next.js, Tailwind CSS, and Framer Motion, I bring the designs to life with pixel-perfect precision. Performance, SEO, and accessibility are built-in from the start.",
     icon: Code2,
-    duration: "5-10 days",
+    duration: "2-4 days",
     deliverables: [
       "Fully functional website",
       "CMS integration",
@@ -84,7 +84,7 @@ export const processSteps = [
     description:
       "You'll review the site on a staging URL and provide feedback. I make revisions until you're 100% satisfied. This iterative process ensures the final product exceeds your expectations.",
     icon: RefreshCw,
-    duration: "2-3 days",
+    duration: "1-2 days",
     deliverables: [
       "Revision rounds",
       "Cross-browser testing",
@@ -137,7 +137,7 @@ export const faqs = [
   {
     question: "How long does a typical project take?",
     answer:
-      "A single landing page typically takes 1-2 weeks from start to finish. Multi-page websites take 2-4 weeks, and full web applications can take 4-8 weeks depending on complexity. I'll give you a precise timeline during our discovery call.",
+      "A single landing page typically can take 3 days to a week from start to finish. Multi-page websites take 1-2 weeks, and full web applications can take 2-8 weeks depending on complexity. I'll give you a precise timeline during our discovery call.",
   },
   {
     question: "What do you need from me to get started?",
@@ -179,37 +179,37 @@ export const faqs = [
 export const timeline = {
   landing: {
     name: "Landing Page",
-    duration: "1-2 weeks",
+    duration: "<1 week",
     phases: [
       { name: "Discovery", days: 1 },
-      { name: "Strategy", days: 2 },
-      { name: "Design", days: 3 },
-      { name: "Development", days: 5 },
-      { name: "Review", days: 2 },
+      { name: "Strategy", days: 1 },
+      { name: "Design", days: 1 },
+      { name: "Development", days: 2 },
+      { name: "Review", days: 1 },
       { name: "Launch", days: 1 },
     ],
   },
   website: {
     name: "Multi-page Website",
-    duration: "2-4 weeks",
+    duration: "1-2 weeks",
     phases: [
       { name: "Discovery", days: 2 },
-      { name: "Strategy", days: 3 },
-      { name: "Design", days: 5 },
-      { name: "Development", days: 10 },
-      { name: "Review", days: 3 },
+      { name: "Strategy", days: 2 },
+      { name: "Design", days: 2 },
+      { name: "Development", days: 4 },
+      { name: "Review", days: 2 },
       { name: "Launch", days: 1 },
     ],
   },
   application: {
     name: "Web Application",
-    duration: "4-8 weeks",
+    duration: "2-8 weeks",
     phases: [
       { name: "Discovery", days: 3 },
-      { name: "Strategy", days: 5 },
-      { name: "Design", days: 7 },
-      { name: "Development", days: 20 },
-      { name: "Review", days: 5 },
+      { name: "Strategy", days: 3 },
+      { name: "Design", days: 4 },
+      { name: "Development", days: 15 },
+      { name: "Review", days: 4 },
       { name: "Launch", days: 2 },
     ],
   },
