@@ -14,6 +14,7 @@ export default function ProjectTimelineViz() {
     { key: "landing", label: "Landing Page" },
     { key: "website", label: "Multi-page Website" },
     { key: "application", label: "Web Application" },
+    { key: "ai_application", label: "AI Web Application" },
   ];
 
   const currentTimeline = timeline[selectedType];

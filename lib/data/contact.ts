@@ -49,6 +49,7 @@ export const socialLinks = [
 export const projectTypes = [
   { value: "ai-landing", label: "AI Landing Page" },
   { value: "startup-website", label: "Startup Website" },
+  { value: "ai-web-application", label: "AI Web Application" },
   { value: "web-application", label: "Web Application" },
   { value: "ui-ux-design", label: "UI/UX Design" },
   { value: "consulting", label: "Consulting / Advisory" },

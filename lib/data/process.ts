@@ -213,4 +213,16 @@ export const timeline = {
       { name: "Launch", days: 2 },
     ],
   },
+  ai_application: {
+    name: "AI Web Application",
+    duration: "3-8 weeks",
+    phases: [
+      { name: "Discovery", days: 3 },
+      { name: "Strategy", days: 4 },
+      { name: "Design", days: 4 },
+      { name: "Development", days: 17 },
+      { name: "Review", days: 4 },
+      { name: "Launch", days: 2 },
+    ],
+  },
 };

@@ -15,6 +15,10 @@ export const seoConfig = {
     "Tailwind CSS",
     "web development",
     "UI/UX design",
+    "web application",
+    "AI web application",
+    "website developer",
+    "app developer",
     "James Gabbitus",
   ],
   author: {

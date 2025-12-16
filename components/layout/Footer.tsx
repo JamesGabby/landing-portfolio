@@ -19,6 +19,7 @@ const footerLinks = {
   services: [
     { label: "AI Landing Pages", href: "#services" },
     { label: "Startup Websites", href: "#services" },
+    { label: "AI Web Applications", href: "#services" },
     { label: "Web Applications", href: "#services" },
     { label: "UI/UX Design", href: "#services" },
   ],

@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "/projects/neural-ai-3.jpg",
     ],
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "AI/ML", "Supabase", "three.js"],
-    category: "Web Application",
+    category: "AI Web Application",
     liveUrl: "https://lessonly.vercel.app",
     caseStudyUrl: "/case-studies/neural-ai",
     featured: true,
@@ -249,6 +249,7 @@ export const projectCategories = [
   "All",
   "AI Landing Page",
   "Web Application",
+  "AI Web Application",
   "Startup Website",
 ];
 
