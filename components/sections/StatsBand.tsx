@@ -21,7 +21,7 @@ const stats = [
   //   label: "Happy Clients",
   // },
   {
-    value: 96,
+    value: 97,
     suffix: "+",
     label: "Average Lighthouse Score",
   },
