@@ -22,6 +22,7 @@ import {
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import SectionHeader from "../ui/SectionHeader";
+import Image from "next/image";
 
 // Profile Image Component with fallback
 const ProfileImage = () => {
@@ -48,16 +49,17 @@ const ProfileImage = () => {
       {/* Image container */}
       <div className="relative aspect-[4/5] w-full max-w-md rounded-3xl overflow-hidden bg-card">
         {!hasError ? (
-          // <Image
-          //   src="/james-gabbitus.jpg"
-          //   alt="James Gabbitus"
-          //   fill
-          //   className="object-cover"
-          //   sizes="(max-width: 768px) 100vw, 400px"
-          //   onError={() => setHasError(true)}
-          //   priority
-          // />
-          <></>
+          <>
+          <Image
+            src="/me.jpg"
+            alt="James Gabbitus"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 400px"
+            onError={() => setHasError(true)}
+            priority
+          />
+          </>
         ) : (
           <ProfileImagePlaceholder />
         )}
