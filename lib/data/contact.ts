@@ -8,6 +8,7 @@ import {
   Twitter,
   Linkedin,
   Send,
+  X,
 } from "lucide-react";
 
 export const contactInfo = {
@@ -27,20 +28,20 @@ export const socialLinks = [
     username: "jamesgabbitus@gmail.com",
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/jamesgabbitus",
-    icon: Twitter,
-    username: "@jamesgabbitus",
+    name: "X",
+    href: "https://twitter.com/james_gabbitus",
+    icon: X,
+    username: "@james_gabbitus",
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/jamesgabbitus",
+    href: "https://linkedin.com/in/james-gabbitus",
     icon: Linkedin,
     username: "jamesgabbitus",
   },
   {
     name: "GitHub",
-    href: "https://github.com/jamesgabbitus",
+    href: "https://github.com/jamesgabby",
     icon: Github,
     username: "jamesgabbitus",
   },

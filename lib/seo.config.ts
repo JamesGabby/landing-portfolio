@@ -24,7 +24,7 @@ export const seoConfig = {
   author: {
     name: "James Gabbitus",
     email: "jamesgabbitus@gmail.com",
-    twitter: "@jamesgabbitus",
+    twitter: "@james_gabbitus",
     linkedin: "https://linkedin.com/in/james-gabbitus",
     github: "https://github.com/jamesgabby",
   },

@@ -15,6 +15,7 @@ import {
   Twitter,
   Linkedin,
   Mail,
+  X,
 } from "lucide-react";
 
 export const personalInfo = {
@@ -185,9 +186,9 @@ export const socialLinks = [
     icon: Github,
   },
   {
-    name: "Twitter",
+    name: "X",
     url: "https://twitter.com/jamesgabbitus",
-    icon: Twitter,
+    icon: X,
   },
   {
     name: "LinkedIn",

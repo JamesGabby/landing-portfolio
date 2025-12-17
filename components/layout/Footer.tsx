@@ -11,6 +11,7 @@ import {
   Twitter,
   Heart,
   ArrowUp,
+  X,
 } from "lucide-react";
 import { SITE_CONFIG, NAV_LINKS } from "@/lib/constants";
 
@@ -32,7 +33,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { label: "Twitter", href: SITE_CONFIG.socials.twitter, icon: Twitter },
+  { label: "X", href: SITE_CONFIG.socials.twitter, icon: X },
   { label: "GitHub", href: SITE_CONFIG.socials.github, icon: Github },
   { label: "LinkedIn", href: SITE_CONFIG.socials.linkedin, icon: Linkedin },
   { label: "Email", href: `mailto:${SITE_CONFIG.email}`, icon: Mail },
