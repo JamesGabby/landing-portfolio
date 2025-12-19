@@ -166,9 +166,9 @@ export default function Services() {
           <SectionHeader
             badge="Services"
             badgeIcon={<Sparkles className="w-3 h-3" />}
-            title="Everything you need to launch your AI startup"
-            titleHighlight="AI startup"
-            description="From stunning landing pages to full-stack applications, I provide end-to-end development services tailored for AI companies."
+            title="Everything you need to grow your online presence" /* launch your AI startup*/
+            titleHighlight="online presence" //AI startup
+            description="From stunning landing pages to full-stack applications, I provide end-to-end development services tailored for your business." /*AI companies.*/
           />
 
           {/* Services Grid */}

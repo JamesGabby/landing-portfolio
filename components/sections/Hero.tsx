@@ -293,14 +293,14 @@ export default function Hero() {
                 </Badge>
               </motion.div>
 
-              {/* Main Headline - Improved sizing */}
-              <motion.h1
+              {/* Main Headline - AI Landing Pages */}
+              {/* <motion.h1
                 variants={itemVariants}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold tracking-tight mb-4 sm:mb-6 leading-tight"
               >
                 I build{" "}
                 <span className="relative inline-block">
-                  <span className="text-gradient">AI landing pages</span>
+                  <span className="text-gradient">AI landing pages</span> 
                   <motion.svg
                     initial={{ pathLength: 0, opacity: 0 }}
                     animate={{ pathLength: 1, opacity: 1 }}
@@ -336,10 +336,55 @@ export default function Hero() {
                     className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 bg-accent/20 -z-10"
                   />
                 </span>
+              </motion.h1> */}
+
+              {/* Main Headline - Local/General */}
+              <motion.h1
+                variants={itemVariants}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold tracking-tight mb-4 sm:mb-6 leading-tight"
+              >
+                I build{" "}
+                <span className="relative inline-block">
+                  <span className="text-gradient">fast, modern websites</span> 
+                  <motion.svg
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={{ pathLength: 1, opacity: 1 }}
+                    transition={{ duration: 1, delay: 1 }}
+                    className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-2 sm:h-3"
+                    viewBox="0 0 200 12"
+                    fill="none"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M2 10C50 4 150 4 198 10"
+                      stroke="url(#gradient)"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                    />
+                    <defs>
+                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#6366f1" />
+                        <stop offset="100%" stopColor="#22d3ee" />
+                      </linearGradient>
+                    </defs>
+                  </motion.svg>
+                </span>
+                <br className="hidden sm:block" />
+                <span className="sm:hidden"> </span>
+                for small businesses in{" "}
+                <span className="relative inline-block">
+                  Derbyshire
+                  <motion.span
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 0.8, delay: 1.2 }}
+                    className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 bg-accent/20 -z-10"
+                  />
+                </span>
               </motion.h1>
 
-              {/* Subheadline - Better mobile sizing */}
-              <motion.p
+              {/* Subheadline - AI Landing Pages */}
+              {/* <motion.p
                 variants={itemVariants}
                 className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
@@ -348,6 +393,20 @@ export default function Hero() {
                 with persuasive design to help you{" "}
                 <span className="text-foreground font-medium">
                   launch faster and convert better
+                </span>
+                .
+              </motion.p> */}
+
+              {/* Subheadline - Local/General */}
+              <motion.p
+                variants={itemVariants}
+                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              >
+                Need a website that actually works for your business? 
+                I'm a Derbyshire-based developer helping local businesses 
+                get online—without the jargon or big agency prices.{" "}
+                <span className="text-foreground font-medium">
+                  Helping you grow online
                 </span>
                 .
               </motion.p>

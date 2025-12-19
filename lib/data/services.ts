@@ -16,38 +16,71 @@ import {
 } from "lucide-react";
 
 export const servicesWithDetails = [
+  // {
+  //   id: "ai-landing-pages",
+  //   title: "AI Landing Pages",
+  //   description:
+  //     "High-converting landing pages specifically designed for AI startups. Showcase your AI product with stunning visuals, clear value propositions, and optimized conversion funnels.",
+  //   icon: Sparkles,
+  //   color: "primary",
+  //   features: [
+  //     "AI-focused copywriting guidance",
+  //     "Interactive product demos",
+  //     "Conversion-optimized layouts",
+  //     "A/B testing ready",
+  //     "Analytics integration",
+  //   ],
+  //   popular: true,
+  //   details: {
+  //     process: [
+  //       "Discovery call to understand your AI product and target audience",
+  //       "Wireframe and content strategy development",
+  //       "High-fidelity design with your feedback",
+  //       "Development with Next.js and animations",
+  //       "Testing, optimization, and launch",
+  //     ],
+  //     deliverables: [
+  //       "Figma design files",
+  //       "Next.js source code",
+  //       "Deployment setup",
+  //       "SEO configuration",
+  //       "Analytics dashboard",
+  //       "Documentation",
+  //     ],
+  //     timeline: "1-2 weeks",
+  //   },
+  // },
   {
     id: "ai-landing-pages",
-    title: "AI Landing Pages",
+    title: "Landing/Marketing Pages",
     description:
-      "High-converting landing pages specifically designed for AI startups. Showcase your AI product with stunning visuals, clear value propositions, and optimized conversion funnels.",
+      "High-converting landing/marketing pages specifically designed for your business. Showcase your business with stunning visuals, clear value propositions, and optimised conversion funnels.",
     icon: Sparkles,
     color: "primary",
     features: [
-      "AI-focused copywriting guidance",
+      "Focused copywriting guidance",
       "Interactive product demos",
-      "Conversion-optimized layouts",
+      "Conversion-optimised layouts",
       "A/B testing ready",
       "Analytics integration",
     ],
     popular: true,
     details: {
       process: [
-        "Discovery call to understand your AI product and target audience",
+        "Discovery call to understand your needs and target audience",
         "Wireframe and content strategy development",
         "High-fidelity design with your feedback",
         "Development with Next.js and animations",
-        "Testing, optimization, and launch",
+        "Testing, optimisation, and launch",
       ],
       deliverables: [
-        "Figma design files",
         "Next.js source code",
         "Deployment setup",
         "SEO configuration",
         "Analytics dashboard",
         "Documentation",
       ],
-      timeline: "1-2 weeks",
+      timeline: "1 week",
     },
   },
   {
@@ -81,7 +114,7 @@ export const servicesWithDetails = [
         "Blog system",
         "Team training session",
       ],
-      timeline: "2-4 weeks",
+      timeline: "1-2 weeks",
     },
   },
   {
@@ -227,8 +260,8 @@ export const packages = [
     id: "starter",
     name: "Starter",
     description: "Perfect for MVPs and early-stage startups",
-    price: 3500,
-    discount_price: 1999,
+    price: 1000, //3500
+    discount_price: 500, //1999
     duration: "<1 week",
     features: [
       "Single landing page",
@@ -250,8 +283,8 @@ export const packages = [
     id: "professional",
     name: "Professional",
     description: "For startups ready to scale their presence",
-    price: 7500,
-    discount_price: 4999,
+    price: 5000, //7500
+    discount_price: 1999, // 4999
     duration: "1-2 weeks",
     features: [
       "Up to 5 pages",
@@ -271,8 +304,8 @@ export const packages = [
     id: "enterprise",
     name: "Enterprise",
     description: "Full-scale solution for established startups",
-    price: 15000,
-    discount_price: 11999,
+    price: 8000, // 15000
+    discount_price: 5000, // 11999
     duration: "3-6 weeks",
     features: [
       "Unlimited pages",

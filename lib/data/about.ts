@@ -28,16 +28,16 @@ export const personalInfo = {
   responseTime: "Usually responds within 2 hours",
   experience: "5+ years",
   projectsCompleted: "50+",
-  bio: `I'm a freelance developer who fell in love with the intersection of beautiful design and powerful technology. After years of working with startups across various industries, I found my niche: helping AI companies tell their story through stunning, high-converting landing pages.
+  bio: `I'm a freelance developer who fell in love with the intersection of beautiful design and powerful technology. After years of working with startups across various industries, I found my niche: helping local companies tell their story through stunning, high-converting landing pages.
 
-There's something magical about taking a complex AI product and transforming it into an experience that anyone can understand and want to use. That's what I do best.
+There's something magical about taking a product and transforming it into an experience that anyone can understand and want to use. That's what I do best. 
 
 I specialize in Next.js, Supabase, and Tailwind CSS—a stack that lets me build fast, scalable, and beautiful websites without compromise. Every project I take on is crafted with one goal in mind: turning your visitors into customers.`,
   shortBio:
     "Freelance Next.js developer specializing in high-converting landing pages for AI startups. I combine modern technology with persuasive design to help you launch faster and convert better.",
   philosophy:
     "I believe great websites aren't just about looking good—they're about creating experiences that guide visitors toward action. Every animation, every word, every pixel should serve a purpose.",
-};
+}; // complex AI
 
 export const skills = [
   {
@@ -93,9 +93,9 @@ export const skills = [
 export const expertise = [
   {
     icon: Sparkles,
-    title: "AI Landing Pages",
+    title: "Landing/Marketing Pages",
     description:
-      "Specialized in creating landing pages that effectively communicate complex AI products to diverse audiences.",
+      "Specialised in creating landing/marketing pages that effectively communicate products to diverse audiences.", //Specialized in creating landing pages that effectively communicate complex AI products to diverse audiences.
   },
   {
     icon: Rocket,
@@ -107,7 +107,7 @@ export const expertise = [
     icon: Zap,
     title: "Performance First",
     description:
-      "Every site I build scores 90+ on Core Web Vitals. Speed isn't optional—it's essential for conversions.",
+      "Every site I build scores 95+ on Core Web Vitals. Speed isn't optional—it's essential for conversions.",
   },
   {
     icon: Users,
@@ -123,7 +123,7 @@ export const experience = [
     title: "Freelance Next.js Developer",
     company: "Self-employed",
     description:
-      "Specializing in AI startup landing pages and web applications.", // Worked with 30+ startups across the globe.
+      "Specialising in landing/marketing pages and web applications for local businesses.", // Worked with 30+ startups across the globe. --- Specializing in AI startup landing pages and web applications.
     highlights: [
       "Built Lessonly - an AI powered education powerhouse for teachers and tutors", // Built 50+ landing pages for AI startups
        // Average conversion increase of 340%

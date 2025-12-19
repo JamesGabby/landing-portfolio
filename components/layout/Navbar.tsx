@@ -201,7 +201,7 @@ export default function Navbar() {
                     <span className="text-gradient"> Gabbitus</span>
                   </span>
                   <span className="text-[10px] text-muted uppercase tracking-widest hidden sm:block">
-                    AI Landing Pages
+                    {/* AI Landing Pages */} Web Developer
                   </span>
                 </div>
               </Link>

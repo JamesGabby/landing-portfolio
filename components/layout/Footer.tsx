@@ -113,9 +113,12 @@ export default function Footer() {
                     </span>
                   </div>
                 </Link>
-                <p className="text-muted-foreground mb-6 max-w-sm">
+                {/* <p className="text-muted-foreground mb-6 max-w-sm">
                   I help AI startups convert visitors into users with stunning,
                   high-performance landing pages built with modern technologies.
+                </p> */}
+                <p className="text-muted-foreground mb-6 max-w-sm">
+                  I help local businesses attract more customers with professional, mobile-friendly websites.
                 </p>
                 {/* Social Links */}
                 <div className="flex items-center gap-2">
