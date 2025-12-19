@@ -259,7 +259,7 @@ export const packages = [
   {
     id: "starter",
     name: "Starter",
-    description: "Perfect for MVPs and early-stage startups",
+    description: "Perfect for small businesses", //Perfect for MVPs and early-stage startups
     price: 1000, //3500
     discount_price: 500, //1999
     duration: "<1 week",
@@ -282,7 +282,7 @@ export const packages = [
   {
     id: "professional",
     name: "Professional",
-    description: "For startups ready to scale their presence",
+    description: "For businesses ready to scale their presence", //For startups ready to scale their presence
     price: 5000, //7500
     discount_price: 1999, // 4999
     duration: "1-2 weeks",
@@ -303,7 +303,7 @@ export const packages = [
   {
     id: "enterprise",
     name: "Enterprise",
-    description: "Full-scale solution for established startups",
+    description: "Full-scale solution for established businesses", //Full-scale solution for established startups"
     price: 8000, // 15000
     discount_price: 5000, // 11999
     duration: "3-6 weeks",
