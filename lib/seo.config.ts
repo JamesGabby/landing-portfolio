@@ -2,9 +2,9 @@
 export const seoConfig = {
   siteName: "James Gabbitus",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://jamesgabbitus.com",
-  title: "James Gabbitus | AI Landing Page Developer",
+  title: "James Gabbitus | Web Developer", //James Gabbitus | AI Landing Page Developer
   description:
-    "I build high-converting landing pages for AI startups and tech companies. Specializing in Next.js, React, and modern web technologies.",
+    "I build high-converting landing pages for small businesses. Specialising in Next.js, React, and modern web technologies.", //I build high-converting landing pages for AI startups and tech companies. Specializing in Next.js, React, and modern web technologies.
   keywords: [
     "AI landing page developer",
     "Next.js developer",
@@ -20,6 +20,29 @@ export const seoConfig = {
     "website developer",
     "app developer",
     "James Gabbitus",
+    "web developer",
+    "local business website",
+    "mobile-friendly website",
+    "responsive design",  
+    "SEO optimization",
+    "performance optimization",
+    "freelance developer for hire",
+    "hire web developer",
+    "software developer",
+    "portfolio website",
+    "software engineer",
+    "frontend developer",
+    "full-stack developer",
+    "backend developer",
+    "web designer",
+    "digital solutions",
+    "custom web development",
+    "professional website",
+    "business website",
+    "ecommerce website",
+    "small business web solutions",
+    "typescript developer",
+    "javascript developer",
   ],
   author: {
     name: "James Gabbitus",
