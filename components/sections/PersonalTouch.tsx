@@ -9,7 +9,7 @@ const workingStyle = [
     icon: MessageCircle,
     title: "Clear Communication",
     description:
-      "I provide daily updates on Slack and weekly video calls. You'll never be left wondering about project status.",
+      "I provide daily updates on WhatsApp and weekly video calls. You'll never be left wondering about project status.",
     color: "primary",
   },
   {

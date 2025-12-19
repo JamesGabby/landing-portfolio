@@ -114,7 +114,7 @@ export const processFeatures = [
   {
     icon: MessageSquare,
     title: "Daily Updates",
-    description: "Stay informed with daily progress updates via Slack or email.",
+    description: "Stay informed with daily progress updates via WhatsApp or email.",
   },
   {
     icon: FileCheck,

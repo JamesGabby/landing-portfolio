@@ -215,7 +215,7 @@ const PricingFAQ = () => {
     },
     {
       q: "How do we communicate during the project?",
-      a: "I use Slack or Discord for daily communication, with weekly video calls for updates. You'll always know the project status.",
+      a: "I use WhatsApp for daily communication, with weekly video calls for updates. You'll always know the project status.",
     },
   ];
 
