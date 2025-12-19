@@ -17,7 +17,7 @@ export const projects: Project[] = [
     ],
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "AI/ML", "Supabase", "three.js"],
     category: "AI Web Application",
-    liveUrl: "https://lessonly.vercel.app",
+    liveUrl: "https://www.lessonly.co.uk",
     caseStudyUrl: "/case-studies/neural-ai",
     featured: true,
     metrics: [
