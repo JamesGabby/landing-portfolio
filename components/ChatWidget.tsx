@@ -6,7 +6,7 @@ import { MessageCircle, X } from 'lucide-react';
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const CHATBOT_URL = 'http://localhost:3000/embed';
+  const CHATBOT_URL = 'https://ai-e-commerce-support-agent.vercel.app/embed';
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
