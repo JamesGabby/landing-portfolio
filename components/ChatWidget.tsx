@@ -14,7 +14,7 @@ export function ChatWidget() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const CHATBOT_URL = 'http://localhost:3001/embed';
+  const CHATBOT_URL = 'https://ai-support-agent-landing.vercel.app/embed';
 
   // Check for mobile viewport
   useEffect(() => {
