@@ -11,7 +11,7 @@ export function ChatWidget() {
   const [showTooltip, setShowTooltip] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
-  const CHATBOT_URL = 'https://ai-e-commerce-support-agent.vercel.app/embed';
+  const CHATBOT_URL = 'https://ai-support-agent-landing.vercel.app/embed';
 
   // Simulate new message notification after 5 seconds if chat is closed
   useEffect(() => {
