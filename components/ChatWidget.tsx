@@ -65,65 +65,6 @@ export function ChatWidget() {
           <div className={`w-full h-full bg-gradient-to-br from-white/95 via-white/90 to-slate-50/95 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/60 ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
             {/* Subtle inner border glow */}
             <div className="absolute inset-0 rounded-3xl border border-purple-200/30 pointer-events-none" />
-            
-            {/* Premium Header - Matching the chat interface */}
-            <div className="relative h-[72px] bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 flex items-center justify-between px-5">
-              {/* Animated shimmer overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
-              
-              {/* Decorative pattern dots */}
-              <div className="absolute inset-0 opacity-10 overflow-hidden">
-                <div className="absolute top-3 left-8 w-1.5 h-1.5 bg-white rounded-full" />
-                <div className="absolute top-5 left-16 w-1 h-1 bg-white rounded-full" />
-                <div className="absolute bottom-4 right-24 w-1 h-1 bg-white rounded-full" />
-                <div className="absolute top-6 right-32 w-1.5 h-1.5 bg-white rounded-full" />
-              </div>
-              
-              {/* Header Content */}
-              <div className="relative flex items-center gap-4">
-                <div className="relative">
-                  {/* Logo container - matching chat interface */}
-                  <div className="w-11 h-11 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30 shadow-lg">
-                    <Zap size={22} className="text-white" />
-                  </div>
-                  {/* Online indicator with ping animation */}
-                  <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-purple-600 shadow-md">
-                    <span className="absolute inset-0 bg-emerald-400 rounded-full animate-ping opacity-75" />
-                  </span>
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-base tracking-tight flex items-center gap-2">
-                    TechGear Support
-                    <Sparkles size={14} className="text-yellow-300 animate-pulse" />
-                  </h3>
-                </div>
-              </div>
-
-              {/* Header Actions */}
-              <div className="relative flex items-center gap-1">
-                <button
-                  onClick={() => setIsMinimized(!isMinimized)}
-                  className="p-2.5 hover:bg-white/20 rounded-xl transition-all duration-200 group"
-                  aria-label={isMinimized ? "Expand chat" : "Minimize chat"}
-                >
-                  {isMinimized ? (
-                    <Maximize2 size={16} className="text-white/80 group-hover:text-white transition-colors" />
-                  ) : (
-                    <Minimize2 size={16} className="text-white/80 group-hover:text-white transition-colors" />
-                  )}
-                </button>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-2.5 hover:bg-white/20 rounded-xl transition-all duration-200 group"
-                  aria-label="Close chat"
-                >
-                  <X size={18} className="text-white/80 group-hover:text-white group-hover:rotate-90 transition-all duration-300" />
-                </button>
-              </div>
-
-              {/* Bottom gradient accent line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-400/50 via-fuchsia-400/50 to-pink-400/50" />
-            </div>
 
             {/* Chat Content Area */}
             {!isMinimized && (
