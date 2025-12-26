@@ -11,9 +11,9 @@ import Experience from "@/components/sections/Experience";
 import TechStack from "@/components/sections/TechStack";
 import StatsBand from "@/components/sections/StatsBand";
 import PersonalTouch from "@/components/sections/PersonalTouch";
-import Testimonials from "@/components/sections/Testimonials";
 import Process from "@/components/sections/Process";
 import Contact from "@/components/sections/Contact";
+import ProcessSimple from "@/components/sections/ProcessSimple";
 
 // Homepage-specific metadata (optional - inherits from layout if not specified)
 export const metadata: Metadata = generateMetadata({
@@ -46,7 +46,8 @@ export default function Home() {
       <TechStack />
       <PersonalTouch />
       {/* <Testimonials /> */}
-      <Process />
+      {/* <Process /> */}
+      <ProcessSimple />
       <Contact />
     </>
   );

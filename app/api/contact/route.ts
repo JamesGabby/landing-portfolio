@@ -6,7 +6,7 @@ import { sendNotificationEmail } from "@/lib/email";
 // Rate limiting map (in production, use Redis or similar)
 const rateLimitMap = new Map<string, { count: number; timestamp: number }>();
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
-const RATE_LIMIT_MAX = 5; // 5 requests per minute
+const RATE_LIMIT_MAX = 10; // 5 requests per minute
 
 function checkRateLimit(ip: string): boolean {
   const now = Date.now();

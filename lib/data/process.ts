@@ -44,29 +44,29 @@ export const processSteps = [
     ],
     color: "accent",
   },
-  {
-    id: "design",
-    step: 3,
-    title: "UI/UX Design",
-    shortTitle: "Design",
-    description:
-      "I design high-fidelity mockups in Figma, focusing on visual hierarchy, user experience, and conversion optimization.", //You'll see exactly how your site will look before any code is written.
-    icon: PenTool,
-    duration: "1-2 days",
-    deliverables: [
-      "Figma design files",
-      "Desktop & mobile designs",
-      "Interactive prototype",
-    ],
-    color: "primary",
-  },
+  // {
+  //   id: "design",
+  //   step: 3,
+  //   title: "UI/UX Design",
+  //   shortTitle: "Design",
+  //   description:
+  //     "I design high-fidelity mockups in Figma, focusing on visual hierarchy, user experience, and conversion optimization.", //You'll see exactly how your site will look before any code is written.
+  //   icon: PenTool,
+  //   duration: "1-2 days",
+  //   deliverables: [
+  //     "Figma design files",
+  //     "Desktop & mobile designs",
+  //     "Interactive prototype",
+  //   ],
+  //   color: "primary",
+  // },
   {
     id: "development",
-    step: 4,
+    step: 3,
     title: "Development",
     shortTitle: "Develop",
     description:
-      "Using Next.js, Tailwind CSS, and Framer Motion, I bring the designs to life with pixel-perfect precision. Performance, SEO, and accessibility are built-in from the start.",
+      "Using Next.js, Tailwind CSS, and Framer Motion, I focus on visual hierarchy, user experience, and conversion optimization with pixel-perfect precision. Performance, SEO, and accessibility are built-in from the start.",
     icon: Code2,
     duration: "2-4 days",
     deliverables: [
@@ -78,7 +78,7 @@ export const processSteps = [
   },
   {
     id: "review",
-    step: 5,
+    step: 4,
     title: "Review & Refine",
     shortTitle: "Refine",
     description:
@@ -94,7 +94,7 @@ export const processSteps = [
   },
   {
     id: "launch",
-    step: 6,
+    step: 5,
     title: "Launch & Support",
     shortTitle: "Launch",
     description:

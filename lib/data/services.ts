@@ -11,76 +11,41 @@ import {
   Shield,
   RefreshCw,
   Sparkles,
-  Globe,
-  Database,
 } from "lucide-react";
 
 export const servicesWithDetails = [
-  // {
-  //   id: "ai-landing-pages",
-  //   title: "AI Landing Pages",
-  //   description:
-  //     "High-converting landing pages specifically designed for AI startups. Showcase your AI product with stunning visuals, clear value propositions, and optimized conversion funnels.",
-  //   icon: Sparkles,
-  //   color: "primary",
-  //   features: [
-  //     "AI-focused copywriting guidance",
-  //     "Interactive product demos",
-  //     "Conversion-optimized layouts",
-  //     "A/B testing ready",
-  //     "Analytics integration",
-  //   ],
-  //   popular: true,
-  //   details: {
-  //     process: [
-  //       "Discovery call to understand your AI product and target audience",
-  //       "Wireframe and content strategy development",
-  //       "High-fidelity design with your feedback",
-  //       "Development with Next.js and animations",
-  //       "Testing, optimization, and launch",
-  //     ],
-  //     deliverables: [
-  //       "Figma design files",
-  //       "Next.js source code",
-  //       "Deployment setup",
-  //       "SEO configuration",
-  //       "Analytics dashboard",
-  //       "Documentation",
-  //     ],
-  //     timeline: "1-2 weeks",
-  //   },
-  // },
   {
     id: "ai-landing-pages",
-    title: "Landing/Marketing Pages",
+    title: "AI Landing Pages",
     description:
-      "High-converting landing/marketing pages specifically designed for your business. Showcase your business with stunning visuals, clear value propositions, and optimised conversion funnels.",
+      "High-converting landing pages specifically designed for AI startups. Showcase your AI product with stunning visuals, clear value propositions, and optimized conversion funnels.",
     icon: Sparkles,
     color: "primary",
     features: [
-      "Focused copywriting guidance",
+      "AI-focused copywriting guidance",
       "Interactive product demos",
-      "Conversion-optimised layouts",
+      "Conversion-optimized layouts",
       "A/B testing ready",
       "Analytics integration",
     ],
     popular: true,
     details: {
       process: [
-        "Discovery call to understand your needs and target audience",
+        "Discovery call to understand your AI product and target audience",
         "Wireframe and content strategy development",
         "High-fidelity design with your feedback",
         "Development with Next.js and animations",
-        "Testing, optimisation, and launch",
+        "Testing, optimization, and launch",
       ],
       deliverables: [
+        "Figma design files",
         "Next.js source code",
         "Deployment setup",
         "SEO configuration",
         "Analytics dashboard",
         "Documentation",
       ],
-      timeline: "1 week",
+      timeline: "1-2 weeks",
     },
   },
   {
@@ -186,40 +151,6 @@ export const servicesWithDetails = [
       timeline: "4-8 weeks",
     },
   },
-  // {
-  //   id: "ui-ux-design",
-  //   title: "UI/UX Design",
-  //   description:
-  //     "Beautiful, intuitive interfaces designed with your users in mind. From wireframes to high-fidelity prototypes, I create designs that delight and convert.",
-  //   icon: Palette,
-  //   color: "accent",
-  //   features: [
-  //     "User research",
-  //     "Wireframing",
-  //     "High-fidelity mockups",
-  //     "Interactive prototypes",
-  //     "Design systems",
-  //   ],
-  //   popular: false,
-  //   details: {
-  //     process: [
-  //       "User research and competitor analysis",
-  //       "Information architecture and user flows",
-  //       "Low-fidelity wireframes and iteration",
-  //       "High-fidelity UI design",
-  //       "Interactive prototype and handoff",
-  //     ],
-  //     deliverables: [
-  //       "User research findings",
-  //       "Wireframe documents",
-  //       "Complete Figma designs",
-  //       "Interactive prototype",
-  //       "Design system/style guide",
-  //       "Developer handoff specs",
-  //     ],
-  //     timeline: "1-3 weeks",
-  //   },
-  // },
 ];
 
 export const capabilities = [
@@ -260,8 +191,8 @@ export const packages = [
     id: "starter",
     name: "Starter",
     description: "Perfect for small businesses", //Perfect for MVPs and early-stage startups
-    price: 1000, //3500
-    discount_price: 500, //1999
+    price: 3500, //3500
+    discount_price: 1999, //1999
     duration: "<1 week",
     features: [
       "Single landing page",
@@ -283,8 +214,8 @@ export const packages = [
     id: "professional",
     name: "Professional",
     description: "For businesses ready to scale their presence", //For startups ready to scale their presence
-    price: 5000, //7500
-    discount_price: 1999, // 4999
+    price: 7500, //7500
+    discount_price: 4999, // 4999
     duration: "1-2 weeks",
     features: [
       "Up to 5 pages",
@@ -304,8 +235,8 @@ export const packages = [
     id: "enterprise",
     name: "Enterprise",
     description: "Full-scale solution for established businesses", //Full-scale solution for established startups"
-    price: 8000, // 15000
-    discount_price: 5000, // 11999
+    price: 15000, // 15000
+    discount_price: 11999, // 11999
     duration: "3-6 weeks",
     features: [
       "Unlimited pages",

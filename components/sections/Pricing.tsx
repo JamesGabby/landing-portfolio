@@ -109,7 +109,7 @@ const PricingCard = ({
             {hasDiscount && (
               <div className="flex items-center gap-2">
                 <span className="text-lg text-muted-foreground line-through decoration-2">
-                  £{formatPrice(pkg.price)}
+                  ${formatPrice(pkg.price)}
                 </span>
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">
                   -{discountPercentage}% OFF
@@ -117,7 +117,7 @@ const PricingCard = ({
               </div>
             )}
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-2xl text-muted-foreground">£</span>
+              <span className="text-2xl text-muted-foreground">$</span>
               <span className={cn(
                 "font-bold text-foreground",
                 hasDiscount ? "text-4xl text-emerald-500" : "text-5xl"
@@ -127,7 +127,7 @@ const PricingCard = ({
             </div>
             {hasDiscount && (
               <p className="text-xs text-emerald-500 font-medium mt-1">
-                You save £{formatPrice(pkg.price - pkg.discount_price!)}
+                You save ${formatPrice(pkg.price - pkg.discount_price!)}
               </p>
             )}
           </div>

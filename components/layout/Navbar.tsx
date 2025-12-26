@@ -201,7 +201,7 @@ export default function Navbar() {
                     <span className="text-gradient"> Gabbitus</span>
                   </span>
                   <span className="text-[10px] text-muted uppercase tracking-widest hidden sm:block">
-                    {/* AI Landing Pages */} Web Developer
+                    AI Landing Pages
                   </span>
                 </div>
               </Link>
@@ -282,7 +282,6 @@ export default function Navbar() {
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-background border-l border-border z-50 lg:hidden overflow-hidden"
             >
-              {/* Premium Animated Close Button */}
               {/* Premium Animated Close Button - Fixed positioning within panel */}
               <div className="absolute top-4 right-4 z-10">
                 <motion.button

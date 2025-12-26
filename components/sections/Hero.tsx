@@ -294,7 +294,7 @@ export default function Hero() {
               </motion.div>
 
               {/* Main Headline - AI Landing Pages */}
-              {/* <motion.h1
+              <motion.h1
                 variants={itemVariants}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold tracking-tight mb-4 sm:mb-6 leading-tight"
               >
@@ -336,10 +336,10 @@ export default function Hero() {
                     className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 bg-accent/20 -z-10"
                   />
                 </span>
-              </motion.h1> */}
+              </motion.h1>
 
               {/* Main Headline - Local/General */}
-              <motion.h1
+              {/* <motion.h1
                 variants={itemVariants}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold tracking-tight mb-4 sm:mb-6 leading-tight"
               >
@@ -381,10 +381,10 @@ export default function Hero() {
                     className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 bg-accent/20 -z-10"
                   />
                 </span>
-              </motion.h1>
+              </motion.h1> */}
 
               {/* Subheadline - AI Landing Pages */}
-              {/* <motion.p
+              <motion.p
                 variants={itemVariants}
                 className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
@@ -395,10 +395,10 @@ export default function Hero() {
                   launch faster and convert better
                 </span>
                 .
-              </motion.p> */}
+              </motion.p>
 
               {/* Subheadline - Local/General */}
-              <motion.p
+              {/* <motion.p
                 variants={itemVariants}
                 className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
@@ -409,7 +409,7 @@ export default function Hero() {
                   Helping you grow online
                 </span>
                 .
-              </motion.p>
+              </motion.p> */}
 
               {/* CTA Buttons - Improved mobile layout */}
               <motion.div

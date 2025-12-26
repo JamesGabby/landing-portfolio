@@ -357,8 +357,7 @@ export default function About() {
                 Why Work With Me?
               </h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                I bring a unique combination of skills that help local businesses
-                succeed online.
+                I bring a unique combination of skills that help AI Startups succeed.
               </p>
             </div>
 

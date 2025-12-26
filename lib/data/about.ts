@@ -10,9 +10,7 @@ import {
   Award,
   Coffee,
   Dumbbell,
-  Mountain,
   Github,
-  Twitter,
   Linkedin,
   Mail,
   X,
@@ -20,7 +18,7 @@ import {
 
 export const personalInfo = {
   name: "James Gabbitus",
-  title: "Freelance Next.js Developer",
+  title: "Next.js Developer",
   tagline: "I help AI startups convert visitors into users",
   location: "Available Worldwide (Remote)",
   email: "jamesgabbitus@gmail.com",
@@ -28,9 +26,9 @@ export const personalInfo = {
   responseTime: "Usually responds within 2 hours",
   experience: "5+ years",
   projectsCompleted: "50+",
-  bio: `I'm a freelance developer who fell in love with the intersection of beautiful design and powerful technology. After years of working with startups across various industries, I found my niche: helping local companies tell their story through stunning, high-converting landing pages.
+  bio: `I'm a freelance developer who fell in love with the intersection of beautiful design and powerful technology. After years of working with startups across various industries, I found my niche: helping AI startups tell their story through stunning, high-converting landing pages.
 
-There's something magical about taking a product and transforming it into an experience that anyone can understand and want to use. That's what I do best. 
+There's something magical about taking complex AI products and transforming them into an experience that anyone can understand and want to use. That's what I do best. 
 
 I specialize in Next.js, Supabase, and Tailwind CSS—a stack that lets me build fast, scalable, and beautiful websites without compromise. Every project I take on is crafted with one goal in mind: turning your visitors into customers.`,
   shortBio:
